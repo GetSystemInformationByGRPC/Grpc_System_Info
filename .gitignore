@@ -1,5 +1,4 @@
 .vs
-Project1/Project1.vcxproj
 Project1/SysInfo.grpc.pb.cc
 Project1/SysInfo.grpc.pb.h
 Project1/SysInfo.pb.cc
