@@ -42,115 +42,115 @@ SystemInfo::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel
   , rpcmethod_GetOsType_(SystemInfo_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status SystemInfo::Stub::GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::RAMResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::RAMRequest, ::RAMResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRAMinfo_, context, request, response);
+::grpc::Status SystemInfo::Stub::GetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::RAMResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::Empty, ::RAMResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRAMinfo_, context, request, response);
 }
 
-void SystemInfo::Stub::async::GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest* request, ::RAMResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::RAMRequest, ::RAMResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRAMinfo_, context, request, response, std::move(f));
+void SystemInfo::Stub::async::GetRAMinfo(::grpc::ClientContext* context, const ::Empty* request, ::RAMResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::Empty, ::RAMResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRAMinfo_, context, request, response, std::move(f));
 }
 
-void SystemInfo::Stub::async::GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest* request, ::RAMResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SystemInfo::Stub::async::GetRAMinfo(::grpc::ClientContext* context, const ::Empty* request, ::RAMResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRAMinfo_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::RAMResponse>* SystemInfo::Stub::PrepareAsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::RAMResponse, ::RAMRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetRAMinfo_, context, request);
+::grpc::ClientAsyncResponseReader< ::RAMResponse>* SystemInfo::Stub::PrepareAsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::RAMResponse, ::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetRAMinfo_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::RAMResponse>* SystemInfo::Stub::AsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::RAMResponse>* SystemInfo::Stub::AsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetRAMinfoRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SystemInfo::Stub::GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::CPUResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::CPURequest, ::CPUResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetCPUutilization_, context, request, response);
+::grpc::Status SystemInfo::Stub::GetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::CPUResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::Empty, ::CPUResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetCPUutilization_, context, request, response);
 }
 
-void SystemInfo::Stub::async::GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest* request, ::CPUResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::CPURequest, ::CPUResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetCPUutilization_, context, request, response, std::move(f));
+void SystemInfo::Stub::async::GetCPUutilization(::grpc::ClientContext* context, const ::Empty* request, ::CPUResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::Empty, ::CPUResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetCPUutilization_, context, request, response, std::move(f));
 }
 
-void SystemInfo::Stub::async::GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest* request, ::CPUResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SystemInfo::Stub::async::GetCPUutilization(::grpc::ClientContext* context, const ::Empty* request, ::CPUResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetCPUutilization_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::CPUResponse>* SystemInfo::Stub::PrepareAsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::CPUResponse, ::CPURequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetCPUutilization_, context, request);
+::grpc::ClientAsyncResponseReader< ::CPUResponse>* SystemInfo::Stub::PrepareAsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::CPUResponse, ::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetCPUutilization_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::CPUResponse>* SystemInfo::Stub::AsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::CPUResponse>* SystemInfo::Stub::AsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetCPUutilizationRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SystemInfo::Stub::GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::DiskResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::DiskRequest, ::DiskResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDiskUsage_, context, request, response);
+::grpc::Status SystemInfo::Stub::GetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::DiskResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::Empty, ::DiskResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDiskUsage_, context, request, response);
 }
 
-void SystemInfo::Stub::async::GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest* request, ::DiskResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::DiskRequest, ::DiskResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDiskUsage_, context, request, response, std::move(f));
+void SystemInfo::Stub::async::GetDiskUsage(::grpc::ClientContext* context, const ::Empty* request, ::DiskResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::Empty, ::DiskResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDiskUsage_, context, request, response, std::move(f));
 }
 
-void SystemInfo::Stub::async::GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest* request, ::DiskResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SystemInfo::Stub::async::GetDiskUsage(::grpc::ClientContext* context, const ::Empty* request, ::DiskResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDiskUsage_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::DiskResponse>* SystemInfo::Stub::PrepareAsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::DiskResponse, ::DiskRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDiskUsage_, context, request);
+::grpc::ClientAsyncResponseReader< ::DiskResponse>* SystemInfo::Stub::PrepareAsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::DiskResponse, ::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDiskUsage_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::DiskResponse>* SystemInfo::Stub::AsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::DiskResponse>* SystemInfo::Stub::AsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetDiskUsageRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SystemInfo::Stub::GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::NetworkResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::NetworkRequest, ::NetworkResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetNetworkAdapters_, context, request, response);
+::grpc::Status SystemInfo::Stub::GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::NetworkResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::Empty, ::NetworkResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetNetworkAdapters_, context, request, response);
 }
 
-void SystemInfo::Stub::async::GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest* request, ::NetworkResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::NetworkRequest, ::NetworkResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetNetworkAdapters_, context, request, response, std::move(f));
+void SystemInfo::Stub::async::GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty* request, ::NetworkResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::Empty, ::NetworkResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetNetworkAdapters_, context, request, response, std::move(f));
 }
 
-void SystemInfo::Stub::async::GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest* request, ::NetworkResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SystemInfo::Stub::async::GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty* request, ::NetworkResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetNetworkAdapters_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::NetworkResponse>* SystemInfo::Stub::PrepareAsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::NetworkResponse, ::NetworkRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetNetworkAdapters_, context, request);
+::grpc::ClientAsyncResponseReader< ::NetworkResponse>* SystemInfo::Stub::PrepareAsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::NetworkResponse, ::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetNetworkAdapters_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::NetworkResponse>* SystemInfo::Stub::AsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::NetworkResponse>* SystemInfo::Stub::AsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetNetworkAdaptersRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SystemInfo::Stub::GetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::OsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::OsRequest, ::OsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetOsType_, context, request, response);
+::grpc::Status SystemInfo::Stub::GetOsType(::grpc::ClientContext* context, const ::Empty& request, ::OsResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::Empty, ::OsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetOsType_, context, request, response);
 }
 
-void SystemInfo::Stub::async::GetOsType(::grpc::ClientContext* context, const ::OsRequest* request, ::OsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::OsRequest, ::OsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetOsType_, context, request, response, std::move(f));
+void SystemInfo::Stub::async::GetOsType(::grpc::ClientContext* context, const ::Empty* request, ::OsResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::Empty, ::OsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetOsType_, context, request, response, std::move(f));
 }
 
-void SystemInfo::Stub::async::GetOsType(::grpc::ClientContext* context, const ::OsRequest* request, ::OsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SystemInfo::Stub::async::GetOsType(::grpc::ClientContext* context, const ::Empty* request, ::OsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetOsType_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::OsResponse>* SystemInfo::Stub::PrepareAsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::OsResponse, ::OsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetOsType_, context, request);
+::grpc::ClientAsyncResponseReader< ::OsResponse>* SystemInfo::Stub::PrepareAsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::OsResponse, ::Empty, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetOsType_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::OsResponse>* SystemInfo::Stub::AsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::OsResponse>* SystemInfo::Stub::AsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetOsTypeRaw(context, request, cq);
   result->StartCall();
@@ -161,50 +161,50 @@ SystemInfo::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SystemInfo_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::RAMRequest, ::RAMResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::Empty, ::RAMResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SystemInfo::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::RAMRequest* req,
+             const ::Empty* req,
              ::RAMResponse* resp) {
                return service->GetRAMinfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SystemInfo_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::CPURequest, ::CPUResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::Empty, ::CPUResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SystemInfo::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::CPURequest* req,
+             const ::Empty* req,
              ::CPUResponse* resp) {
                return service->GetCPUutilization(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SystemInfo_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::DiskRequest, ::DiskResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::Empty, ::DiskResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SystemInfo::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::DiskRequest* req,
+             const ::Empty* req,
              ::DiskResponse* resp) {
                return service->GetDiskUsage(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SystemInfo_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::NetworkRequest, ::NetworkResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::Empty, ::NetworkResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SystemInfo::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::NetworkRequest* req,
+             const ::Empty* req,
              ::NetworkResponse* resp) {
                return service->GetNetworkAdapters(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SystemInfo_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::OsRequest, ::OsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SystemInfo::Service, ::Empty, ::OsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SystemInfo::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::OsRequest* req,
+             const ::Empty* req,
              ::OsResponse* resp) {
                return service->GetOsType(ctx, req, resp);
              }, this)));
@@ -213,35 +213,35 @@ SystemInfo::Service::Service() {
 SystemInfo::Service::~Service() {
 }
 
-::grpc::Status SystemInfo::Service::GetRAMinfo(::grpc::ServerContext* context, const ::RAMRequest* request, ::RAMResponse* response) {
+::grpc::Status SystemInfo::Service::GetRAMinfo(::grpc::ServerContext* context, const ::Empty* request, ::RAMResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SystemInfo::Service::GetCPUutilization(::grpc::ServerContext* context, const ::CPURequest* request, ::CPUResponse* response) {
+::grpc::Status SystemInfo::Service::GetCPUutilization(::grpc::ServerContext* context, const ::Empty* request, ::CPUResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SystemInfo::Service::GetDiskUsage(::grpc::ServerContext* context, const ::DiskRequest* request, ::DiskResponse* response) {
+::grpc::Status SystemInfo::Service::GetDiskUsage(::grpc::ServerContext* context, const ::Empty* request, ::DiskResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SystemInfo::Service::GetNetworkAdapters(::grpc::ServerContext* context, const ::NetworkRequest* request, ::NetworkResponse* response) {
+::grpc::Status SystemInfo::Service::GetNetworkAdapters(::grpc::ServerContext* context, const ::Empty* request, ::NetworkResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SystemInfo::Service::GetOsType(::grpc::ServerContext* context, const ::OsRequest* request, ::OsResponse* response) {
+::grpc::Status SystemInfo::Service::GetOsType(::grpc::ServerContext* context, const ::Empty* request, ::OsResponse* response) {
   (void) context;
   (void) request;
   (void) response;

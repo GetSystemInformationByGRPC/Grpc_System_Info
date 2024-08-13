@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="FileName.cpp" />
     <ClCompile Include="getsysinfo.cpp" />
-    <ClCompile Include="server.cpp" />
     <ClCompile Include="sysinfo.cpp" />
     <ClCompile Include="SysInfo.grpc.pb.cc" />
     <ClCompile Include="SysInfo.pb.cc" />

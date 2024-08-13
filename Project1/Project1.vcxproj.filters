@@ -24,17 +24,14 @@
     <ClCompile Include="getsysinfo.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="server.cpp">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="sysinfo.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SysInfo.grpc.pb.cc">
-      <Filter>Resource Files\Source Files</Filter>
+      <Filter>Resource Files\Source Files\gRPC</Filter>
     </ClCompile>
     <ClCompile Include="SysInfo.pb.cc">
-      <Filter>Resource Files\Source Files</Filter>
+      <Filter>Resource Files\Source Files\gRPC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +41,11 @@
     <ClInclude Include="sysinfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SysInfo.grpc.pb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SysInfo.pb.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files\Source Files\gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="SysInfo.grpc.pb.h">
+      <Filter>Resource Files\Source Files\gRPC</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

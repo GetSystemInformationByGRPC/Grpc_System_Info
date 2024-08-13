@@ -1,23 +1,27 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+
 service SystemInfo {
-  rpc GetRAMinfo (RAMRequest) returns (RAMResponse) {}
+  rpc GetRAMinfo (Empty) returns (RAMResponse) {}
 
-  rpc GetCPUutilization (CPURequest) returns (CPUResponse) {}
+  rpc GetCPUutilization (Empty) returns (CPUResponse) {}
 
-  rpc GetDiskUsage (DiskRequest) returns (DiskResponse) {}
+  rpc GetDiskUsage (Empty) returns (DiskResponse) {}
 
-  rpc GetNetworkAdapters (NetworkRequest) returns (NetworkResponse) {}
+  rpc GetNetworkAdapters (Empty) returns (NetworkResponse) {}
 
-  rpc GetOsType (OsRequest) returns (OsResponse) {}
+  rpc GetOsType (Empty) returns (OsResponse) {}
 
+}
+
+message Empty{
 }
 
 message OsResponse{
 	string isVirtualMachine = 1;
 }
 
-message OsRequest {}
 
 message NetworkAdapterInfo{
 	string friendly_name = 1;
@@ -33,10 +37,6 @@ message NetworkResponse{
 	repeated NetworkAdapterInfo networks_adapter = 1;
 } 
 
-message NetworkRequest{
-
-}
-
 message DiskInfo{
 	string path = 1;
 	int64 totalsize = 2;
@@ -49,23 +49,13 @@ message DiskResponse{
 	repeated DiskInfo drives = 1;
 }
 
-message DiskRequest{}
- 
-
-message RAMRequest {
-  
-}
-
 message RAMResponse {
   int64 totalRAMinGB = 1;
   int64 usedRAMinGB = 2;
   int64 totalRAMinMB = 3;
   int64 usedRAMinMB = 4;
 }
-
-message CPURequest{
 	
-}
 
 message CPUResponse{
 	int64 avgCPUusage = 1;

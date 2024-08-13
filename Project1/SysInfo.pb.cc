@@ -42,18 +42,6 @@ struct RAMResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RAMResponseDefaultTypeInternal _RAMResponse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR RAMRequest::RAMRequest(::_pbi::ConstantInitialized) {}
-struct RAMRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RAMRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RAMRequestDefaultTypeInternal() {}
-  union {
-    RAMRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RAMRequestDefaultTypeInternal _RAMRequest_default_instance_;
 
 inline constexpr OsResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -75,30 +63,6 @@ struct OsResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OsResponseDefaultTypeInternal _OsResponse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR OsRequest::OsRequest(::_pbi::ConstantInitialized) {}
-struct OsRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR OsRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~OsRequestDefaultTypeInternal() {}
-  union {
-    OsRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OsRequestDefaultTypeInternal _OsRequest_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR NetworkRequest::NetworkRequest(::_pbi::ConstantInitialized) {}
-struct NetworkRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR NetworkRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~NetworkRequestDefaultTypeInternal() {}
-  union {
-    NetworkRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NetworkRequestDefaultTypeInternal _NetworkRequest_default_instance_;
 
 inline constexpr NetworkAdapterInfo::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -136,17 +100,17 @@ struct NetworkAdapterInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NetworkAdapterInfoDefaultTypeInternal _NetworkAdapterInfo_default_instance_;
       template <typename>
-PROTOBUF_CONSTEXPR DiskRequest::DiskRequest(::_pbi::ConstantInitialized) {}
-struct DiskRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR DiskRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~DiskRequestDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR Empty::Empty(::_pbi::ConstantInitialized) {}
+struct EmptyDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EmptyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EmptyDefaultTypeInternal() {}
   union {
-    DiskRequest _instance;
+    Empty _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DiskRequestDefaultTypeInternal _DiskRequest_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EmptyDefaultTypeInternal _Empty_default_instance_;
 
 inline constexpr DiskInfo::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -191,18 +155,6 @@ struct CPUResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CPUResponseDefaultTypeInternal _CPUResponse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR CPURequest::CPURequest(::_pbi::ConstantInitialized) {}
-struct CPURequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CPURequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CPURequestDefaultTypeInternal() {}
-  union {
-    CPURequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CPURequestDefaultTypeInternal _CPURequest_default_instance_;
 
 inline constexpr NetworkResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -241,13 +193,21 @@ struct DiskResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DiskResponseDefaultTypeInternal _DiskResponse_default_instance_;
-static ::_pb::Metadata file_level_metadata_SysInfo_2eproto[12];
+static ::_pb::Metadata file_level_metadata_SysInfo_2eproto[8];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_SysInfo_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
     file_level_service_descriptors_SysInfo_2eproto = nullptr;
 const ::uint32_t TableStruct_SysInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
     protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::Empty, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::OsResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -257,14 +217,6 @@ const ::uint32_t TableStruct_SysInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABL
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::OsResponse, _impl_.isvirtualmachine_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::OsRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::NetworkAdapterInfo, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -289,14 +241,6 @@ const ::uint32_t TableStruct_SysInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABL
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::NetworkResponse, _impl_.networks_adapter_),
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::NetworkRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::DiskInfo, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
@@ -319,22 +263,6 @@ const ::uint32_t TableStruct_SysInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABL
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::DiskResponse, _impl_.drives_),
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::DiskRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::RAMRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::RAMResponse, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
@@ -346,14 +274,6 @@ const ::uint32_t TableStruct_SysInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABL
     PROTOBUF_FIELD_OFFSET(::RAMResponse, _impl_.usedramingb_),
     PROTOBUF_FIELD_OFFSET(::RAMResponse, _impl_.totalraminmb_),
     PROTOBUF_FIELD_OFFSET(::RAMResponse, _impl_.usedraminmb_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::CPURequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::CPUResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -367,70 +287,64 @@ const ::uint32_t TableStruct_SysInfo_2eproto::offsets[] PROTOBUF_SECTION_VARIABL
 
 static const ::_pbi::MigrationSchema
     schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::OsResponse)},
-        {9, -1, -1, sizeof(::OsRequest)},
+        {0, -1, -1, sizeof(::Empty)},
+        {8, -1, -1, sizeof(::OsResponse)},
         {17, -1, -1, sizeof(::NetworkAdapterInfo)},
         {31, -1, -1, sizeof(::NetworkResponse)},
-        {40, -1, -1, sizeof(::NetworkRequest)},
-        {48, -1, -1, sizeof(::DiskInfo)},
-        {61, -1, -1, sizeof(::DiskResponse)},
-        {70, -1, -1, sizeof(::DiskRequest)},
-        {78, -1, -1, sizeof(::RAMRequest)},
-        {86, -1, -1, sizeof(::RAMResponse)},
-        {98, -1, -1, sizeof(::CPURequest)},
-        {106, -1, -1, sizeof(::CPUResponse)},
+        {40, -1, -1, sizeof(::DiskInfo)},
+        {53, -1, -1, sizeof(::DiskResponse)},
+        {62, -1, -1, sizeof(::RAMResponse)},
+        {74, -1, -1, sizeof(::CPUResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
+    &::_Empty_default_instance_._instance,
     &::_OsResponse_default_instance_._instance,
-    &::_OsRequest_default_instance_._instance,
     &::_NetworkAdapterInfo_default_instance_._instance,
     &::_NetworkResponse_default_instance_._instance,
-    &::_NetworkRequest_default_instance_._instance,
     &::_DiskInfo_default_instance_._instance,
     &::_DiskResponse_default_instance_._instance,
-    &::_DiskRequest_default_instance_._instance,
-    &::_RAMRequest_default_instance_._instance,
     &::_RAMResponse_default_instance_._instance,
-    &::_CPURequest_default_instance_._instance,
     &::_CPUResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_SysInfo_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\rSysInfo.proto\"&\n\nOsResponse\022\030\n\020isVirtu"
-    "alMachine\030\001 \001(\t\"\013\n\tOsRequest\"\214\001\n\022Network"
-    "AdapterInfo\022\025\n\rfriendly_name\030\001 \001(\t\022\024\n\014Ad"
-    "apter_Desc\030\002 \001(\t\022\022\n\nip_address\030\003 \001(\t\022\017\n\007"
-    "ip_mask\030\004 \001(\t\022\017\n\007gateway\030\005 \001(\t\022\023\n\013dhcp_s"
-    "erver\030\006 \001(\t\"@\n\017NetworkResponse\022-\n\020networ"
-    "ks_adapter\030\001 \003(\0132\023.NetworkAdapterInfo\"\020\n"
-    "\016NetworkRequest\"f\n\010DiskInfo\022\014\n\004path\030\001 \001("
-    "\t\022\021\n\ttotalsize\030\002 \001(\003\022\021\n\tusedspace\030\003 \001(\003\022"
-    "\021\n\tfreespace\030\004 \001(\003\022\023\n\013usedpercent\030\005 \001(\003\""
-    ")\n\014DiskResponse\022\031\n\006drives\030\001 \003(\0132\t.DiskIn"
-    "fo\"\r\n\013DiskRequest\"\014\n\nRAMRequest\"c\n\013RAMRe"
-    "sponse\022\024\n\014totalRAMinGB\030\001 \001(\003\022\023\n\013usedRAMi"
-    "nGB\030\002 \001(\003\022\024\n\014totalRAMinMB\030\003 \001(\003\022\023\n\013usedR"
-    "AMinMB\030\004 \001(\003\"\014\n\nCPURequest\"\"\n\013CPURespons"
-    "e\022\023\n\013avgCPUusage\030\001 \001(\0032\373\001\n\nSystemInfo\022)\n"
-    "\nGetRAMinfo\022\013.RAMRequest\032\014.RAMResponse\"\000"
-    "\0220\n\021GetCPUutilization\022\013.CPURequest\032\014.CPU"
-    "Response\"\000\022-\n\014GetDiskUsage\022\014.DiskRequest"
-    "\032\r.DiskResponse\"\000\0229\n\022GetNetworkAdapters\022"
-    "\017.NetworkRequest\032\020.NetworkResponse\"\000\022&\n\t"
-    "GetOsType\022\n.OsRequest\032\013.OsResponse\"\000b\006pr"
-    "oto3"
+    "\n\rSysInfo.proto\032\033google/protobuf/empty.p"
+    "roto\"\007\n\005Empty\"&\n\nOsResponse\022\030\n\020isVirtual"
+    "Machine\030\001 \001(\t\"\214\001\n\022NetworkAdapterInfo\022\025\n\r"
+    "friendly_name\030\001 \001(\t\022\024\n\014Adapter_Desc\030\002 \001("
+    "\t\022\022\n\nip_address\030\003 \001(\t\022\017\n\007ip_mask\030\004 \001(\t\022\017"
+    "\n\007gateway\030\005 \001(\t\022\023\n\013dhcp_server\030\006 \001(\t\"@\n\017"
+    "NetworkResponse\022-\n\020networks_adapter\030\001 \003("
+    "\0132\023.NetworkAdapterInfo\"f\n\010DiskInfo\022\014\n\004pa"
+    "th\030\001 \001(\t\022\021\n\ttotalsize\030\002 \001(\003\022\021\n\tusedspace"
+    "\030\003 \001(\003\022\021\n\tfreespace\030\004 \001(\003\022\023\n\013usedpercent"
+    "\030\005 \001(\003\")\n\014DiskResponse\022\031\n\006drives\030\001 \003(\0132\t"
+    ".DiskInfo\"c\n\013RAMResponse\022\024\n\014totalRAMinGB"
+    "\030\001 \001(\003\022\023\n\013usedRAMinGB\030\002 \001(\003\022\024\n\014totalRAMi"
+    "nMB\030\003 \001(\003\022\023\n\013usedRAMinMB\030\004 \001(\003\"\"\n\013CPURes"
+    "ponse\022\023\n\013avgCPUusage\030\001 \001(\0032\336\001\n\nSystemInf"
+    "o\022$\n\nGetRAMinfo\022\006.Empty\032\014.RAMResponse\"\000\022"
+    "+\n\021GetCPUutilization\022\006.Empty\032\014.CPURespon"
+    "se\"\000\022\'\n\014GetDiskUsage\022\006.Empty\032\r.DiskRespo"
+    "nse\"\000\0220\n\022GetNetworkAdapters\022\006.Empty\032\020.Ne"
+    "tworkResponse\"\000\022\"\n\tGetOsType\022\006.Empty\032\013.O"
+    "sResponse\"\000b\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_SysInfo_2eproto_deps[1] =
+    {
+        &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
 };
 static ::absl::once_flag descriptor_table_SysInfo_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_SysInfo_2eproto = {
     false,
     false,
-    884,
+    819,
     descriptor_table_protodef_SysInfo_2eproto,
     "SysInfo.proto",
     &descriptor_table_SysInfo_2eproto_once,
-    nullptr,
-    0,
-    12,
+    descriptor_table_SysInfo_2eproto_deps,
+    1,
+    8,
     schemas,
     file_default_instances,
     TableStruct_SysInfo_2eproto::offsets,
@@ -456,6 +370,41 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_SysInfo_
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_SysInfo_2eproto(&descriptor_table_SysInfo_2eproto);
+// ===================================================================
+
+class Empty::_Internal {
+ public:
+};
+
+Empty::Empty(::google::protobuf::Arena* arena)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  // @@protoc_insertion_point(arena_constructor:Empty)
+}
+Empty::Empty(
+    ::google::protobuf::Arena* arena,
+    const Empty& from)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  Empty* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+
+  // @@protoc_insertion_point(copy_constructor:Empty)
+}
+
+
+
+
+
+
+
+
+
+::google::protobuf::Metadata Empty::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
+      file_level_metadata_SysInfo_2eproto[0]);
+}
 // ===================================================================
 
 class OsResponse::_Internal {
@@ -642,41 +591,6 @@ void OsResponse::InternalSwap(OsResponse* PROTOBUF_RESTRICT other) {
 }
 
 ::google::protobuf::Metadata OsResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[0]);
-}
-// ===================================================================
-
-class OsRequest::_Internal {
- public:
-};
-
-OsRequest::OsRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:OsRequest)
-}
-OsRequest::OsRequest(
-    ::google::protobuf::Arena* arena,
-    const OsRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  OsRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:OsRequest)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata OsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
       file_level_metadata_SysInfo_2eproto[1]);
@@ -1203,41 +1117,6 @@ void NetworkResponse::InternalSwap(NetworkResponse* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
-class NetworkRequest::_Internal {
- public:
-};
-
-NetworkRequest::NetworkRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:NetworkRequest)
-}
-NetworkRequest::NetworkRequest(
-    ::google::protobuf::Arena* arena,
-    const NetworkRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  NetworkRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:NetworkRequest)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata NetworkRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[4]);
-}
-// ===================================================================
-
 class DiskInfo::_Internal {
  public:
 };
@@ -1537,7 +1416,7 @@ void DiskInfo::InternalSwap(DiskInfo* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata DiskInfo::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[5]);
+      file_level_metadata_SysInfo_2eproto[4]);
 }
 // ===================================================================
 
@@ -1720,77 +1599,7 @@ void DiskResponse::InternalSwap(DiskResponse* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata DiskResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[6]);
-}
-// ===================================================================
-
-class DiskRequest::_Internal {
- public:
-};
-
-DiskRequest::DiskRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:DiskRequest)
-}
-DiskRequest::DiskRequest(
-    ::google::protobuf::Arena* arena,
-    const DiskRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  DiskRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:DiskRequest)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata DiskRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[7]);
-}
-// ===================================================================
-
-class RAMRequest::_Internal {
- public:
-};
-
-RAMRequest::RAMRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:RAMRequest)
-}
-RAMRequest::RAMRequest(
-    ::google::protobuf::Arena* arena,
-    const RAMRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  RAMRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:RAMRequest)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata RAMRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[8]);
+      file_level_metadata_SysInfo_2eproto[5]);
 }
 // ===================================================================
 
@@ -2038,42 +1847,7 @@ void RAMResponse::InternalSwap(RAMResponse* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata RAMResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[9]);
-}
-// ===================================================================
-
-class CPURequest::_Internal {
- public:
-};
-
-CPURequest::CPURequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:CPURequest)
-}
-CPURequest::CPURequest(
-    ::google::protobuf::Arena* arena,
-    const CPURequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  CPURequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:CPURequest)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata CPURequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[10]);
+      file_level_metadata_SysInfo_2eproto[6]);
 }
 // ===================================================================
 
@@ -2243,7 +2017,7 @@ void CPUResponse::InternalSwap(CPUResponse* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata CPUResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_SysInfo_2eproto_getter, &descriptor_table_SysInfo_2eproto_once,
-      file_level_metadata_SysInfo_2eproto[11]);
+      file_level_metadata_SysInfo_2eproto[7]);
 }
 // @@protoc_insertion_point(namespace_scope)
 namespace google {

@@ -18,8 +18,6 @@ using grpc::Status;
 using grpc::Server;
 using grpc::ServerBuilder;
 using grpc::ServerContext;
-
-
 using namespace std;
 
 SERVICE_STATUS        g_ServiceStatus = { 0 };
@@ -152,8 +150,10 @@ private:
     sysinfo systeminformation;
     sysinfo::CpuUtilization cpuut;
 public:
-    Status GetRAMinfo(ServerContext* context, const RAMRequest* request,
+    Status GetRAMinfo(ServerContext* context, const Empty* request,
         RAMResponse* reply) override {
+        std::string peer = context->peer();
+        std::cout << "Received request from: " << peer << std::endl;
         struct RAM ram;
         systeminformation.getRAMinfo(ram);
         reply->set_totalramingb(ram.totalRAMinGB);
@@ -163,12 +163,12 @@ public:
 
         return Status::OK;
     }
-    Status GetCPUutilization(ServerContext* context, const CPURequest* request,
+    Status GetCPUutilization(ServerContext* context, const Empty* request,
         CPUResponse* reply) override {
         reply->set_avgcpuusage(cpuut.PrintAverageCpuUsage());
         return Status::OK;
     }
-    Status GetDiskUsage(ServerContext* context, const DiskRequest* request,
+    Status GetDiskUsage(ServerContext* context, const Empty* request,
         DiskResponse* reply) override {
         std::vector<std::wstring> paths;
         systeminformation.ListDrives(paths);
@@ -189,7 +189,7 @@ public:
 
     }
 
-    Status GetOsType(ServerContext* context, const OsRequest* request,
+    Status GetOsType(ServerContext* context, const Empty* request,
         OsResponse* reply) override {
         bool type = systeminformation.IsRunningInVirtualMachine();
         if (type) {
@@ -202,7 +202,7 @@ public:
 
     }
 
-    Status GetNetworkAdapters(ServerContext* context, const NetworkRequest* request,
+    Status GetNetworkAdapters(ServerContext* context, const Empty* request,
         NetworkResponse* reply) override {
         std::vector<struct Network> networks;
         systeminformation.printNetworkAdapterFriendlyNames(networks);

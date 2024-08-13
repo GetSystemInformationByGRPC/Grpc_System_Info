@@ -35,6 +35,7 @@
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/protobuf/unknown_field_set.h"
+#include "google/protobuf/empty.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -56,39 +57,27 @@ struct TableStruct_SysInfo_2eproto {
 };
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_SysInfo_2eproto;
-class CPURequest;
-struct CPURequestDefaultTypeInternal;
-extern CPURequestDefaultTypeInternal _CPURequest_default_instance_;
 class CPUResponse;
 struct CPUResponseDefaultTypeInternal;
 extern CPUResponseDefaultTypeInternal _CPUResponse_default_instance_;
 class DiskInfo;
 struct DiskInfoDefaultTypeInternal;
 extern DiskInfoDefaultTypeInternal _DiskInfo_default_instance_;
-class DiskRequest;
-struct DiskRequestDefaultTypeInternal;
-extern DiskRequestDefaultTypeInternal _DiskRequest_default_instance_;
 class DiskResponse;
 struct DiskResponseDefaultTypeInternal;
 extern DiskResponseDefaultTypeInternal _DiskResponse_default_instance_;
+class Empty;
+struct EmptyDefaultTypeInternal;
+extern EmptyDefaultTypeInternal _Empty_default_instance_;
 class NetworkAdapterInfo;
 struct NetworkAdapterInfoDefaultTypeInternal;
 extern NetworkAdapterInfoDefaultTypeInternal _NetworkAdapterInfo_default_instance_;
-class NetworkRequest;
-struct NetworkRequestDefaultTypeInternal;
-extern NetworkRequestDefaultTypeInternal _NetworkRequest_default_instance_;
 class NetworkResponse;
 struct NetworkResponseDefaultTypeInternal;
 extern NetworkResponseDefaultTypeInternal _NetworkResponse_default_instance_;
-class OsRequest;
-struct OsRequestDefaultTypeInternal;
-extern OsRequestDefaultTypeInternal _OsRequest_default_instance_;
 class OsResponse;
 struct OsResponseDefaultTypeInternal;
 extern OsResponseDefaultTypeInternal _OsResponse_default_instance_;
-class RAMRequest;
-struct RAMRequestDefaultTypeInternal;
-extern RAMRequestDefaultTypeInternal _RAMRequest_default_instance_;
 class RAMResponse;
 struct RAMResponseDefaultTypeInternal;
 extern RAMResponseDefaultTypeInternal _RAMResponse_default_instance_;
@@ -162,7 +151,7 @@ class RAMResponse final :
                &_RAMResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    6;
 
   friend void swap(RAMResponse& a, RAMResponse& b) {
     a.Swap(&b);
@@ -314,142 +303,6 @@ class RAMResponse final :
   friend struct ::TableStruct_SysInfo_2eproto;
 };// -------------------------------------------------------------------
 
-class RAMRequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:RAMRequest) */ {
- public:
-  inline RAMRequest() : RAMRequest(nullptr) {}
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR RAMRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline RAMRequest(const RAMRequest& from)
-      : RAMRequest(nullptr, from) {}
-  RAMRequest(RAMRequest&& from) noexcept
-    : RAMRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline RAMRequest& operator=(const RAMRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RAMRequest& operator=(RAMRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RAMRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RAMRequest* internal_default_instance() {
-    return reinterpret_cast<const RAMRequest*>(
-               &_RAMRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    8;
-
-  friend void swap(RAMRequest& a, RAMRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RAMRequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RAMRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RAMRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RAMRequest>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const RAMRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const RAMRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "RAMRequest";
-  }
-  protected:
-  explicit RAMRequest(::google::protobuf::Arena* arena);
-  RAMRequest(::google::protobuf::Arena* arena, const RAMRequest& from);
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:RAMRequest)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_SysInfo_2eproto;
-};// -------------------------------------------------------------------
-
 class OsResponse final :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:OsResponse) */ {
  public:
@@ -509,7 +362,7 @@ class OsResponse final :
                &_OsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(OsResponse& a, OsResponse& b) {
     a.Swap(&b);
@@ -628,278 +481,6 @@ class OsResponse final :
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
-  friend struct ::TableStruct_SysInfo_2eproto;
-};// -------------------------------------------------------------------
-
-class OsRequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:OsRequest) */ {
- public:
-  inline OsRequest() : OsRequest(nullptr) {}
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR OsRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline OsRequest(const OsRequest& from)
-      : OsRequest(nullptr, from) {}
-  OsRequest(OsRequest&& from) noexcept
-    : OsRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline OsRequest& operator=(const OsRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline OsRequest& operator=(OsRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const OsRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const OsRequest* internal_default_instance() {
-    return reinterpret_cast<const OsRequest*>(
-               &_OsRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  friend void swap(OsRequest& a, OsRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(OsRequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(OsRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  OsRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<OsRequest>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const OsRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const OsRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "OsRequest";
-  }
-  protected:
-  explicit OsRequest(::google::protobuf::Arena* arena);
-  OsRequest(::google::protobuf::Arena* arena, const OsRequest& from);
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:OsRequest)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_SysInfo_2eproto;
-};// -------------------------------------------------------------------
-
-class NetworkRequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:NetworkRequest) */ {
- public:
-  inline NetworkRequest() : NetworkRequest(nullptr) {}
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR NetworkRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline NetworkRequest(const NetworkRequest& from)
-      : NetworkRequest(nullptr, from) {}
-  NetworkRequest(NetworkRequest&& from) noexcept
-    : NetworkRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline NetworkRequest& operator=(const NetworkRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline NetworkRequest& operator=(NetworkRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const NetworkRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const NetworkRequest* internal_default_instance() {
-    return reinterpret_cast<const NetworkRequest*>(
-               &_NetworkRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    4;
-
-  friend void swap(NetworkRequest& a, NetworkRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(NetworkRequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(NetworkRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  NetworkRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<NetworkRequest>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const NetworkRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const NetworkRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "NetworkRequest";
-  }
-  protected:
-  explicit NetworkRequest(::google::protobuf::Arena* arena);
-  NetworkRequest(::google::protobuf::Arena* arena, const NetworkRequest& from);
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:NetworkRequest)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
   friend struct ::TableStruct_SysInfo_2eproto;
 };// -------------------------------------------------------------------
 
@@ -1174,25 +755,25 @@ class NetworkAdapterInfo final :
   friend struct ::TableStruct_SysInfo_2eproto;
 };// -------------------------------------------------------------------
 
-class DiskRequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:DiskRequest) */ {
+class Empty final :
+    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:Empty) */ {
  public:
-  inline DiskRequest() : DiskRequest(nullptr) {}
+  inline Empty() : Empty(nullptr) {}
   template<typename = void>
-  explicit PROTOBUF_CONSTEXPR DiskRequest(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR Empty(::google::protobuf::internal::ConstantInitialized);
 
-  inline DiskRequest(const DiskRequest& from)
-      : DiskRequest(nullptr, from) {}
-  DiskRequest(DiskRequest&& from) noexcept
-    : DiskRequest() {
+  inline Empty(const Empty& from)
+      : Empty(nullptr, from) {}
+  Empty(Empty&& from) noexcept
+    : Empty() {
     *this = ::std::move(from);
   }
 
-  inline DiskRequest& operator=(const DiskRequest& from) {
+  inline Empty& operator=(const Empty& from) {
     CopyFrom(from);
     return *this;
   }
-  inline DiskRequest& operator=(DiskRequest&& from) noexcept {
+  inline Empty& operator=(Empty&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1224,20 +805,20 @@ class DiskRequest final :
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const DiskRequest& default_instance() {
+  static const Empty& default_instance() {
     return *internal_default_instance();
   }
-  static inline const DiskRequest* internal_default_instance() {
-    return reinterpret_cast<const DiskRequest*>(
-               &_DiskRequest_default_instance_);
+  static inline const Empty* internal_default_instance() {
+    return reinterpret_cast<const Empty*>(
+               &_Empty_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    0;
 
-  friend void swap(DiskRequest& a, DiskRequest& b) {
+  friend void swap(Empty& a, Empty& b) {
     a.Swap(&b);
   }
-  inline void Swap(DiskRequest* other) {
+  inline void Swap(Empty* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr &&
@@ -1250,7 +831,7 @@ class DiskRequest final :
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(DiskRequest* other) {
+  void UnsafeArenaSwap(Empty* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1258,15 +839,15 @@ class DiskRequest final :
 
   // implements Message ----------------------------------------------
 
-  DiskRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<DiskRequest>(arena);
+  Empty* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Empty>(arena);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const DiskRequest& from) {
+  inline void CopyFrom(const Empty& from) {
     ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const DiskRequest& from) {
+  void MergeFrom(const Empty& from) {
     ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
   public:
@@ -1274,11 +855,11 @@ class DiskRequest final :
   private:
   friend class ::google::protobuf::internal::AnyMetadata;
   static ::absl::string_view FullMessageName() {
-    return "DiskRequest";
+    return "Empty";
   }
   protected:
-  explicit DiskRequest(::google::protobuf::Arena* arena);
-  DiskRequest(::google::protobuf::Arena* arena, const DiskRequest& from);
+  explicit Empty(::google::protobuf::Arena* arena);
+  Empty(::google::protobuf::Arena* arena, const Empty& from);
   public:
 
   ::google::protobuf::Metadata GetMetadata() const final;
@@ -1287,7 +868,7 @@ class DiskRequest final :
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:DiskRequest)
+  // @@protoc_insertion_point(class_scope:Empty)
  private:
   class _Internal;
 
@@ -1369,7 +950,7 @@ class DiskInfo final :
                &_DiskInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    4;
 
   friend void swap(DiskInfo& a, DiskInfo& b) {
     a.Swap(&b);
@@ -1598,7 +1179,7 @@ class CPUResponse final :
                &_CPUResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    7;
 
   friend void swap(CPUResponse& a, CPUResponse& b) {
     a.Swap(&b);
@@ -1711,142 +1292,6 @@ class CPUResponse final :
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
-  friend struct ::TableStruct_SysInfo_2eproto;
-};// -------------------------------------------------------------------
-
-class CPURequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:CPURequest) */ {
- public:
-  inline CPURequest() : CPURequest(nullptr) {}
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR CPURequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline CPURequest(const CPURequest& from)
-      : CPURequest(nullptr, from) {}
-  CPURequest(CPURequest&& from) noexcept
-    : CPURequest() {
-    *this = ::std::move(from);
-  }
-
-  inline CPURequest& operator=(const CPURequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CPURequest& operator=(CPURequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CPURequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const CPURequest* internal_default_instance() {
-    return reinterpret_cast<const CPURequest*>(
-               &_CPURequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    10;
-
-  friend void swap(CPURequest& a, CPURequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(CPURequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(CPURequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  CPURequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CPURequest>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const CPURequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const CPURequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "CPURequest";
-  }
-  protected:
-  explicit CPURequest(::google::protobuf::Arena* arena);
-  CPURequest(::google::protobuf::Arena* arena, const CPURequest& from);
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:CPURequest)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
   friend struct ::TableStruct_SysInfo_2eproto;
 };// -------------------------------------------------------------------
 
@@ -2092,7 +1537,7 @@ class DiskResponse final :
                &_DiskResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    5;
 
   friend void swap(DiskResponse& a, DiskResponse& b) {
     a.Swap(&b);
@@ -2230,6 +1675,10 @@ class DiskResponse final :
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
+// Empty
+
+// -------------------------------------------------------------------
+
 // OsResponse
 
 // string isVirtualMachine = 1;
@@ -2284,10 +1733,6 @@ inline void OsResponse::set_allocated_isvirtualmachine(std::string* value) {
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:OsResponse.isVirtualMachine)
 }
-
-// -------------------------------------------------------------------
-
-// OsRequest
 
 // -------------------------------------------------------------------
 
@@ -2666,10 +2111,6 @@ NetworkResponse::_internal_mutable_networks_adapter() {
 
 // -------------------------------------------------------------------
 
-// NetworkRequest
-
-// -------------------------------------------------------------------
-
 // DiskInfo
 
 // string path = 1;
@@ -2872,14 +2313,6 @@ DiskResponse::_internal_mutable_drives() {
 
 // -------------------------------------------------------------------
 
-// DiskRequest
-
-// -------------------------------------------------------------------
-
-// RAMRequest
-
-// -------------------------------------------------------------------
-
 // RAMResponse
 
 // int64 totalRAMinGB = 1;
@@ -2973,10 +2406,6 @@ inline void RAMResponse::_internal_set_usedraminmb(::int64_t value) {
   ;
   _impl_.usedraminmb_ = value;
 }
-
-// -------------------------------------------------------------------
-
-// CPURequest
 
 // -------------------------------------------------------------------
 

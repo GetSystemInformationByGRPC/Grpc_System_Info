@@ -18,12 +18,12 @@ void sysinfo::getRAMinfo(struct RAM &ram)
         uint64_t  totalRAMinMB = statex.ullTotalPhys / (1024 * 1024);
         uint64_t usedRAMinMB = (statex.ullTotalPhys - statex.ullAvailPhys) / (1024 * 1024);
 
-        std::cout << "Total RAM: " << totalRAMinGB << " GB" << std::endl;
-        std::cout << "Used RAM: " << usedRAMinGB << " GB" << std::endl;
+        //std::cout << "Total RAM: " << totalRAMinGB << " GB" << std::endl;
+        //std::cout << "Used RAM: " << usedRAMinGB << " GB" << std::endl;
 
-        std::cout << "Total RAM: " << totalRAMinMB << " MB" << std::endl;
-        std::cout << "Used RAM: " << usedRAMinMB << " MB" << std::endl;
-        std::cout << "Percent Of RAM Usage: " << (usedRAMinMB * 100) / totalRAMinMB << "% " << std::endl;
+        //std::cout << "Total RAM: " << totalRAMinMB << " MB" << std::endl;
+        //std::cout << "Used RAM: " << usedRAMinMB << " MB" << std::endl;
+        //std::cout << "Percent Of RAM Usage: " << (usedRAMinMB * 100) / totalRAMinMB << "% " << std::endl;
         ram.totalRAMinGB = totalRAMinGB;
         ram.totalRAMinMB = totalRAMinMB;
         ram.usedRAMinGB = usedRAMinGB;

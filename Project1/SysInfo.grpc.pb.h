@@ -33,121 +33,121 @@ class SystemInfo final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::RAMResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>> AsyncGetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status GetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::RAMResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>> AsyncGetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>>(AsyncGetRAMinfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>> PrepareAsyncGetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>> PrepareAsyncGetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>>(PrepareAsyncGetRAMinfoRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::CPUResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>> AsyncGetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status GetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::CPUResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>> AsyncGetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>>(AsyncGetCPUutilizationRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>> PrepareAsyncGetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>> PrepareAsyncGetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>>(PrepareAsyncGetCPUutilizationRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::DiskResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>> AsyncGetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status GetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::DiskResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>> AsyncGetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>>(AsyncGetDiskUsageRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>> PrepareAsyncGetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>> PrepareAsyncGetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>>(PrepareAsyncGetDiskUsageRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::NetworkResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>> AsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::NetworkResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>> AsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>>(AsyncGetNetworkAdaptersRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>> PrepareAsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>> PrepareAsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>>(PrepareAsyncGetNetworkAdaptersRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::OsResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>> AsyncGetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status GetOsType(::grpc::ClientContext* context, const ::Empty& request, ::OsResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>> AsyncGetOsType(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>>(AsyncGetOsTypeRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>> PrepareAsyncGetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>> PrepareAsyncGetOsType(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>>(PrepareAsyncGetOsTypeRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest* request, ::RAMResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest* request, ::RAMResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest* request, ::CPUResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest* request, ::CPUResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest* request, ::DiskResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest* request, ::DiskResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest* request, ::NetworkResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest* request, ::NetworkResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetOsType(::grpc::ClientContext* context, const ::OsRequest* request, ::OsResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetOsType(::grpc::ClientContext* context, const ::OsRequest* request, ::OsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetRAMinfo(::grpc::ClientContext* context, const ::Empty* request, ::RAMResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetRAMinfo(::grpc::ClientContext* context, const ::Empty* request, ::RAMResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetCPUutilization(::grpc::ClientContext* context, const ::Empty* request, ::CPUResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetCPUutilization(::grpc::ClientContext* context, const ::Empty* request, ::CPUResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetDiskUsage(::grpc::ClientContext* context, const ::Empty* request, ::DiskResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetDiskUsage(::grpc::ClientContext* context, const ::Empty* request, ::DiskResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty* request, ::NetworkResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty* request, ::NetworkResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetOsType(::grpc::ClientContext* context, const ::Empty* request, ::OsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetOsType(::grpc::ClientContext* context, const ::Empty* request, ::OsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>* AsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>* PrepareAsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>* AsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>* PrepareAsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>* AsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>* PrepareAsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>* AsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>* PrepareAsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>* AsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>* PrepareAsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>* AsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::RAMResponse>* PrepareAsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>* AsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CPUResponse>* PrepareAsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>* AsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::DiskResponse>* PrepareAsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>* AsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::NetworkResponse>* PrepareAsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>* AsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::OsResponse>* PrepareAsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::RAMResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::RAMResponse>> AsyncGetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status GetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::RAMResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::RAMResponse>> AsyncGetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::RAMResponse>>(AsyncGetRAMinfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::RAMResponse>> PrepareAsyncGetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::RAMResponse>> PrepareAsyncGetRAMinfo(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::RAMResponse>>(PrepareAsyncGetRAMinfoRaw(context, request, cq));
     }
-    ::grpc::Status GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::CPUResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CPUResponse>> AsyncGetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status GetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::CPUResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CPUResponse>> AsyncGetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CPUResponse>>(AsyncGetCPUutilizationRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CPUResponse>> PrepareAsyncGetCPUutilization(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CPUResponse>> PrepareAsyncGetCPUutilization(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CPUResponse>>(PrepareAsyncGetCPUutilizationRaw(context, request, cq));
     }
-    ::grpc::Status GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::DiskResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::DiskResponse>> AsyncGetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status GetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::DiskResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::DiskResponse>> AsyncGetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::DiskResponse>>(AsyncGetDiskUsageRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::DiskResponse>> PrepareAsyncGetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::DiskResponse>> PrepareAsyncGetDiskUsage(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::DiskResponse>>(PrepareAsyncGetDiskUsageRaw(context, request, cq));
     }
-    ::grpc::Status GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::NetworkResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::NetworkResponse>> AsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::NetworkResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::NetworkResponse>> AsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::NetworkResponse>>(AsyncGetNetworkAdaptersRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::NetworkResponse>> PrepareAsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::NetworkResponse>> PrepareAsyncGetNetworkAdapters(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::NetworkResponse>>(PrepareAsyncGetNetworkAdaptersRaw(context, request, cq));
     }
-    ::grpc::Status GetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::OsResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::OsResponse>> AsyncGetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status GetOsType(::grpc::ClientContext* context, const ::Empty& request, ::OsResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::OsResponse>> AsyncGetOsType(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::OsResponse>>(AsyncGetOsTypeRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::OsResponse>> PrepareAsyncGetOsType(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::OsResponse>> PrepareAsyncGetOsType(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::OsResponse>>(PrepareAsyncGetOsTypeRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest* request, ::RAMResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetRAMinfo(::grpc::ClientContext* context, const ::RAMRequest* request, ::RAMResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest* request, ::CPUResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetCPUutilization(::grpc::ClientContext* context, const ::CPURequest* request, ::CPUResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest* request, ::DiskResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetDiskUsage(::grpc::ClientContext* context, const ::DiskRequest* request, ::DiskResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest* request, ::NetworkResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetNetworkAdapters(::grpc::ClientContext* context, const ::NetworkRequest* request, ::NetworkResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetOsType(::grpc::ClientContext* context, const ::OsRequest* request, ::OsResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetOsType(::grpc::ClientContext* context, const ::OsRequest* request, ::OsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetRAMinfo(::grpc::ClientContext* context, const ::Empty* request, ::RAMResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetRAMinfo(::grpc::ClientContext* context, const ::Empty* request, ::RAMResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetCPUutilization(::grpc::ClientContext* context, const ::Empty* request, ::CPUResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetCPUutilization(::grpc::ClientContext* context, const ::Empty* request, ::CPUResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetDiskUsage(::grpc::ClientContext* context, const ::Empty* request, ::DiskResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetDiskUsage(::grpc::ClientContext* context, const ::Empty* request, ::DiskResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty* request, ::NetworkResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetNetworkAdapters(::grpc::ClientContext* context, const ::Empty* request, ::NetworkResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetOsType(::grpc::ClientContext* context, const ::Empty* request, ::OsResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetOsType(::grpc::ClientContext* context, const ::Empty* request, ::OsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -159,16 +159,16 @@ class SystemInfo final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::RAMResponse>* AsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::RAMResponse>* PrepareAsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::RAMRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CPUResponse>* AsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CPUResponse>* PrepareAsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::CPURequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::DiskResponse>* AsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::DiskResponse>* PrepareAsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::DiskRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::NetworkResponse>* AsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::NetworkResponse>* PrepareAsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::NetworkRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::OsResponse>* AsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::OsResponse>* PrepareAsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::OsRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::RAMResponse>* AsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::RAMResponse>* PrepareAsyncGetRAMinfoRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::CPUResponse>* AsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::CPUResponse>* PrepareAsyncGetCPUutilizationRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::DiskResponse>* AsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::DiskResponse>* PrepareAsyncGetDiskUsageRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::NetworkResponse>* AsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::NetworkResponse>* PrepareAsyncGetNetworkAdaptersRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::OsResponse>* AsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::OsResponse>* PrepareAsyncGetOsTypeRaw(::grpc::ClientContext* context, const ::Empty& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_GetRAMinfo_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCPUutilization_;
     const ::grpc::internal::RpcMethod rpcmethod_GetDiskUsage_;
@@ -181,11 +181,11 @@ class SystemInfo final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status GetRAMinfo(::grpc::ServerContext* context, const ::RAMRequest* request, ::RAMResponse* response);
-    virtual ::grpc::Status GetCPUutilization(::grpc::ServerContext* context, const ::CPURequest* request, ::CPUResponse* response);
-    virtual ::grpc::Status GetDiskUsage(::grpc::ServerContext* context, const ::DiskRequest* request, ::DiskResponse* response);
-    virtual ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* context, const ::NetworkRequest* request, ::NetworkResponse* response);
-    virtual ::grpc::Status GetOsType(::grpc::ServerContext* context, const ::OsRequest* request, ::OsResponse* response);
+    virtual ::grpc::Status GetRAMinfo(::grpc::ServerContext* context, const ::Empty* request, ::RAMResponse* response);
+    virtual ::grpc::Status GetCPUutilization(::grpc::ServerContext* context, const ::Empty* request, ::CPUResponse* response);
+    virtual ::grpc::Status GetDiskUsage(::grpc::ServerContext* context, const ::Empty* request, ::DiskResponse* response);
+    virtual ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* context, const ::Empty* request, ::NetworkResponse* response);
+    virtual ::grpc::Status GetOsType(::grpc::ServerContext* context, const ::Empty* request, ::OsResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_GetRAMinfo : public BaseClass {
@@ -199,11 +199,11 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/) override {
+    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetRAMinfo(::grpc::ServerContext* context, ::RAMRequest* request, ::grpc::ServerAsyncResponseWriter< ::RAMResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetRAMinfo(::grpc::ServerContext* context, ::Empty* request, ::grpc::ServerAsyncResponseWriter< ::RAMResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -219,11 +219,11 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/) override {
+    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetCPUutilization(::grpc::ServerContext* context, ::CPURequest* request, ::grpc::ServerAsyncResponseWriter< ::CPUResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetCPUutilization(::grpc::ServerContext* context, ::Empty* request, ::grpc::ServerAsyncResponseWriter< ::CPUResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -239,11 +239,11 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/) override {
+    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetDiskUsage(::grpc::ServerContext* context, ::DiskRequest* request, ::grpc::ServerAsyncResponseWriter< ::DiskResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetDiskUsage(::grpc::ServerContext* context, ::Empty* request, ::grpc::ServerAsyncResponseWriter< ::DiskResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -259,11 +259,11 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/) override {
+    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetNetworkAdapters(::grpc::ServerContext* context, ::NetworkRequest* request, ::grpc::ServerAsyncResponseWriter< ::NetworkResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetNetworkAdapters(::grpc::ServerContext* context, ::Empty* request, ::grpc::ServerAsyncResponseWriter< ::NetworkResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -279,11 +279,11 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/) override {
+    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetOsType(::grpc::ServerContext* context, ::OsRequest* request, ::grpc::ServerAsyncResponseWriter< ::OsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetOsType(::grpc::ServerContext* context, ::Empty* request, ::grpc::ServerAsyncResponseWriter< ::OsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -295,25 +295,25 @@ class SystemInfo final {
    public:
     WithCallbackMethod_GetRAMinfo() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::RAMRequest, ::RAMResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::Empty, ::RAMResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::RAMRequest* request, ::RAMResponse* response) { return this->GetRAMinfo(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::Empty* request, ::RAMResponse* response) { return this->GetRAMinfo(context, request, response); }));}
     void SetMessageAllocatorFor_GetRAMinfo(
-        ::grpc::MessageAllocator< ::RAMRequest, ::RAMResponse>* allocator) {
+        ::grpc::MessageAllocator< ::Empty, ::RAMResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::RAMRequest, ::RAMResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::Empty, ::RAMResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetRAMinfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/) override {
+    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetRAMinfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetCPUutilization : public BaseClass {
@@ -322,25 +322,25 @@ class SystemInfo final {
    public:
     WithCallbackMethod_GetCPUutilization() {
       ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::CPURequest, ::CPUResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::Empty, ::CPUResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::CPURequest* request, ::CPUResponse* response) { return this->GetCPUutilization(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::Empty* request, ::CPUResponse* response) { return this->GetCPUutilization(context, request, response); }));}
     void SetMessageAllocatorFor_GetCPUutilization(
-        ::grpc::MessageAllocator< ::CPURequest, ::CPUResponse>* allocator) {
+        ::grpc::MessageAllocator< ::Empty, ::CPUResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::CPURequest, ::CPUResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::Empty, ::CPUResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetCPUutilization() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/) override {
+    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetCPUutilization(
-      ::grpc::CallbackServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetDiskUsage : public BaseClass {
@@ -349,25 +349,25 @@ class SystemInfo final {
    public:
     WithCallbackMethod_GetDiskUsage() {
       ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::DiskRequest, ::DiskResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::Empty, ::DiskResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::DiskRequest* request, ::DiskResponse* response) { return this->GetDiskUsage(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::Empty* request, ::DiskResponse* response) { return this->GetDiskUsage(context, request, response); }));}
     void SetMessageAllocatorFor_GetDiskUsage(
-        ::grpc::MessageAllocator< ::DiskRequest, ::DiskResponse>* allocator) {
+        ::grpc::MessageAllocator< ::Empty, ::DiskResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::DiskRequest, ::DiskResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::Empty, ::DiskResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetDiskUsage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/) override {
+    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetDiskUsage(
-      ::grpc::CallbackServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetNetworkAdapters : public BaseClass {
@@ -376,25 +376,25 @@ class SystemInfo final {
    public:
     WithCallbackMethod_GetNetworkAdapters() {
       ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::NetworkRequest, ::NetworkResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::Empty, ::NetworkResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::NetworkRequest* request, ::NetworkResponse* response) { return this->GetNetworkAdapters(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::Empty* request, ::NetworkResponse* response) { return this->GetNetworkAdapters(context, request, response); }));}
     void SetMessageAllocatorFor_GetNetworkAdapters(
-        ::grpc::MessageAllocator< ::NetworkRequest, ::NetworkResponse>* allocator) {
+        ::grpc::MessageAllocator< ::Empty, ::NetworkResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::NetworkRequest, ::NetworkResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::Empty, ::NetworkResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetNetworkAdapters() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/) override {
+    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetNetworkAdapters(
-      ::grpc::CallbackServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetOsType : public BaseClass {
@@ -403,25 +403,25 @@ class SystemInfo final {
    public:
     WithCallbackMethod_GetOsType() {
       ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::OsRequest, ::OsResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::Empty, ::OsResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::OsRequest* request, ::OsResponse* response) { return this->GetOsType(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::Empty* request, ::OsResponse* response) { return this->GetOsType(context, request, response); }));}
     void SetMessageAllocatorFor_GetOsType(
-        ::grpc::MessageAllocator< ::OsRequest, ::OsResponse>* allocator) {
+        ::grpc::MessageAllocator< ::Empty, ::OsResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::OsRequest, ::OsResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::Empty, ::OsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetOsType() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/) override {
+    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetOsType(
-      ::grpc::CallbackServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_GetRAMinfo<WithCallbackMethod_GetCPUutilization<WithCallbackMethod_GetDiskUsage<WithCallbackMethod_GetNetworkAdapters<WithCallbackMethod_GetOsType<Service > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -437,7 +437,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/) override {
+    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -454,7 +454,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/) override {
+    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -471,7 +471,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/) override {
+    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -488,7 +488,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/) override {
+    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -505,7 +505,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/) override {
+    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -522,7 +522,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/) override {
+    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -542,7 +542,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/) override {
+    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -562,7 +562,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/) override {
+    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -582,7 +582,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/) override {
+    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -602,7 +602,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/) override {
+    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -625,7 +625,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/) override {
+    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -647,7 +647,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/) override {
+    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -669,7 +669,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/) override {
+    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -691,7 +691,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/) override {
+    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -713,7 +713,7 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/) override {
+    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -728,10 +728,10 @@ class SystemInfo final {
     WithStreamedUnaryMethod_GetRAMinfo() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::RAMRequest, ::RAMResponse>(
+          ::Empty, ::RAMResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::RAMRequest, ::RAMResponse>* streamer) {
+                     ::Empty, ::RAMResponse>* streamer) {
                        return this->StreamedGetRAMinfo(context,
                          streamer);
                   }));
@@ -740,12 +740,12 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::RAMRequest* /*request*/, ::RAMResponse* /*response*/) override {
+    ::grpc::Status GetRAMinfo(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::RAMResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetRAMinfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::RAMRequest,::RAMResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetRAMinfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Empty,::RAMResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetCPUutilization : public BaseClass {
@@ -755,10 +755,10 @@ class SystemInfo final {
     WithStreamedUnaryMethod_GetCPUutilization() {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::CPURequest, ::CPUResponse>(
+          ::Empty, ::CPUResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::CPURequest, ::CPUResponse>* streamer) {
+                     ::Empty, ::CPUResponse>* streamer) {
                        return this->StreamedGetCPUutilization(context,
                          streamer);
                   }));
@@ -767,12 +767,12 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::CPURequest* /*request*/, ::CPUResponse* /*response*/) override {
+    ::grpc::Status GetCPUutilization(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::CPUResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetCPUutilization(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CPURequest,::CPUResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetCPUutilization(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Empty,::CPUResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetDiskUsage : public BaseClass {
@@ -782,10 +782,10 @@ class SystemInfo final {
     WithStreamedUnaryMethod_GetDiskUsage() {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::DiskRequest, ::DiskResponse>(
+          ::Empty, ::DiskResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::DiskRequest, ::DiskResponse>* streamer) {
+                     ::Empty, ::DiskResponse>* streamer) {
                        return this->StreamedGetDiskUsage(context,
                          streamer);
                   }));
@@ -794,12 +794,12 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::DiskRequest* /*request*/, ::DiskResponse* /*response*/) override {
+    ::grpc::Status GetDiskUsage(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::DiskResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetDiskUsage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::DiskRequest,::DiskResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetDiskUsage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Empty,::DiskResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetNetworkAdapters : public BaseClass {
@@ -809,10 +809,10 @@ class SystemInfo final {
     WithStreamedUnaryMethod_GetNetworkAdapters() {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::NetworkRequest, ::NetworkResponse>(
+          ::Empty, ::NetworkResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::NetworkRequest, ::NetworkResponse>* streamer) {
+                     ::Empty, ::NetworkResponse>* streamer) {
                        return this->StreamedGetNetworkAdapters(context,
                          streamer);
                   }));
@@ -821,12 +821,12 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::NetworkRequest* /*request*/, ::NetworkResponse* /*response*/) override {
+    ::grpc::Status GetNetworkAdapters(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::NetworkResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetNetworkAdapters(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::NetworkRequest,::NetworkResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetNetworkAdapters(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Empty,::NetworkResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetOsType : public BaseClass {
@@ -836,10 +836,10 @@ class SystemInfo final {
     WithStreamedUnaryMethod_GetOsType() {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::OsRequest, ::OsResponse>(
+          ::Empty, ::OsResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::OsRequest, ::OsResponse>* streamer) {
+                     ::Empty, ::OsResponse>* streamer) {
                        return this->StreamedGetOsType(context,
                          streamer);
                   }));
@@ -848,12 +848,12 @@ class SystemInfo final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::OsRequest* /*request*/, ::OsResponse* /*response*/) override {
+    ::grpc::Status GetOsType(::grpc::ServerContext* /*context*/, const ::Empty* /*request*/, ::OsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetOsType(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::OsRequest,::OsResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetOsType(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Empty,::OsResponse>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_GetRAMinfo<WithStreamedUnaryMethod_GetCPUutilization<WithStreamedUnaryMethod_GetDiskUsage<WithStreamedUnaryMethod_GetNetworkAdapters<WithStreamedUnaryMethod_GetOsType<Service > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
