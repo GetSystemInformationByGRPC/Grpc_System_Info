@@ -14,27 +14,25 @@
 #pragma comment(lib, "Iphlpapi.lib")
 
 struct RAM {
-	long long totalRAMinGB;
-	long long usedRAMinGB;
-	long long totalRAMinMB;
-	long long usedRAMinMB;
+	uint64_t Total_RAM;
+	uint64_t Used_RAM;
+
 };
 
 struct Disk {
-    std::string path;
-    long long totalsize;
-    long long usedspace;
-    long long freespace;
-    double percentage;
+    std::string Path;
+    uint64_t Total_Size;
+    uint64_t Used_Space;
+
 };
 
 struct Network {
-    std::string friendly_name;
+    std::string Friendly_Name;
     std::string Adapter_Desc;
-    std::string ip_address;
-    std::string ip_mask;
-    std::string gateway;
-    std::string dhcp_server;
+    std::string Ip_Address;
+    std::string Ip_Mask;
+    std::string Gateway;
+    std::string Dhcp_Server;
 };
 
 
@@ -47,8 +45,8 @@ public:
 	void getDiskUsage(const std::wstring& path,struct Disk &disk);
     std::string GetAdapterFriendlyName(PIP_ADAPTER_INFO pAdapterInfo);
     void printNetworkAdapterFriendlyNames(std::vector<struct Network>& networks);
-	//void getNetworkInfo(std::vector<struct Network>& networks);
-    std::string wstring_to_string(const std::wstring& wstr);
+    std::string WstringToString(const std::wstring& wstr);
+    uint64_t ByteToGb(uint64_t size_in_byte);
 	bool IsRunningInVirtualMachine();
     class CpuUtilization {
     public:

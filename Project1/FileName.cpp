@@ -156,16 +156,14 @@ public:
         std::cout << "Received request from: " << peer << std::endl;
         struct RAM ram;
         systeminformation.getRAMinfo(ram);
-        reply->set_totalramingb(ram.totalRAMinGB);
-        reply->set_totalraminmb(ram.totalRAMinMB);
-        reply->set_usedramingb(ram.usedRAMinGB);
-        reply->set_usedraminmb(ram.usedRAMinMB);
-
+        reply->set_total_ram(ram.Total_RAM);
+        reply->set_used_ram(ram.Used_RAM);
+  
         return Status::OK;
     }
     Status GetCPUutilization(ServerContext* context, const Empty* request,
         CPUResponse* reply) override {
-        reply->set_avgcpuusage(cpuut.PrintAverageCpuUsage());
+        reply->set_avg_cpu_utilization(cpuut.PrintAverageCpuUsage());
         return Status::OK;
     }
     Status GetDiskUsage(ServerContext* context, const Empty* request,
@@ -178,11 +176,10 @@ public:
             struct Disk disk;
             systeminformation.getDiskUsage(path, disk);
             DiskInfo* driveInfo = reply->add_drives();
-            driveInfo->set_totalsize(disk.totalsize);
-            driveInfo->set_path(disk.path);
-            driveInfo->set_usedspace(disk.usedspace);
-            driveInfo->set_usedpercent(disk.percentage);
-            driveInfo->set_freespace(disk.freespace);
+            driveInfo->set_total_size(disk.Total_Size);
+            driveInfo->set_path(disk.Path);
+            driveInfo->set_used_space(disk.Used_Space);
+    
 
         }
         return  Status::OK;
@@ -193,10 +190,10 @@ public:
         OsResponse* reply) override {
         bool type = systeminformation.IsRunningInVirtualMachine();
         if (type) {
-            reply->set_isvirtualmachine("The system is running in a virtual machine.");
+            reply->set_is_virtual_machine("true");
         }
         else {
-            reply->set_isvirtualmachine("The system is running on physical hardware.");
+            reply->set_is_virtual_machine("false");
         }
         return Status::OK;
 
@@ -209,12 +206,12 @@ public:
         for (auto network : networks)
         {
             NetworkAdapterInfo* networkInfo = reply->add_networks_adapter();
-            networkInfo->set_friendly_name(network.friendly_name);
+            networkInfo->set_friendly_name(network.Friendly_Name);
             networkInfo->set_adapter_desc(network.Adapter_Desc);
-            networkInfo->set_ip_address(network.ip_address);
-            networkInfo->set_ip_mask(network.ip_mask);
-            networkInfo->set_gateway(network.gateway);
-            networkInfo->set_dhcp_server(network.dhcp_server);
+            networkInfo->set_ip_address(network.Ip_Address);
+            networkInfo->set_ip_mask(network.Ip_Mask);
+            networkInfo->set_gateway(network.Gateway);
+            networkInfo->set_dhcp_server(network.Dhcp_Server);
         }
         return Status::OK;
     }
@@ -265,6 +262,9 @@ void Console_App()
         {
             RAM ram;
             systeminformation.getRAMinfo(ram);
+            std::cout << "\n\t Total RAM Size In GB : " << systeminformation.ByteToGb(ram.Total_RAM) << endl;
+            std::cout << "\n\t Used RAM Size In GB : " << systeminformation.ByteToGb(ram.Used_RAM) << endl;
+            std::cout << "\n\t Precent Of RAM Usage : " << (ram.Total_RAM / ram.Used_RAM) * 100 << endl;
         }
         else if (command == 2)
         {

@@ -1,7 +1,11 @@
 #include "sysinfo.h"
 
+uint64_t sysinfo::ByteToGb(uint64_t size_in_byte)
+{
+    return size_in_byte / (1024 * 1024 * 1024);
+}
 
-std::string sysinfo::wstring_to_string(const std::wstring& wstr) {
+std::string sysinfo::WstringToString(const std::wstring& wstr) {
     std::wstring_convert<std::codecvt_utf8<wchar_t>> conv;
     return conv.to_bytes(wstr);
 }
@@ -12,32 +16,25 @@ void sysinfo::getRAMinfo(struct RAM &ram)
     statex.dwLength = sizeof(statex);
     
     if (GlobalMemoryStatusEx(&statex)) {
-        uint64_t totalRAMinGB = statex.ullTotalPhys / (1024 * 1024 * 1024);
-        uint64_t usedRAMinGB = (statex.ullTotalPhys - statex.ullAvailPhys) / (1024 * 1024 * 1024);
-
-        uint64_t  totalRAMinMB = statex.ullTotalPhys / (1024 * 1024);
-        uint64_t usedRAMinMB = (statex.ullTotalPhys - statex.ullAvailPhys) / (1024 * 1024);
+        uint64_t Total_RAM = statex.ullTotalPhys;
+        uint64_t Used_RAM = (statex.ullTotalPhys - statex.ullAvailPhys);
 
         //std::cout << "Total RAM: " << totalRAMinGB << " GB" << std::endl;
         //std::cout << "Used RAM: " << usedRAMinGB << " GB" << std::endl;
 
-        //std::cout << "Total RAM: " << totalRAMinMB << " MB" << std::endl;
-        //std::cout << "Used RAM: " << usedRAMinMB << " MB" << std::endl;
-        //std::cout << "Percent Of RAM Usage: " << (usedRAMinMB * 100) / totalRAMinMB << "% " << std::endl;
-        ram.totalRAMinGB = totalRAMinGB;
-        ram.totalRAMinMB = totalRAMinMB;
-        ram.usedRAMinGB = usedRAMinGB;
-        ram.usedRAMinMB = usedRAMinMB;
+        ram.Total_RAM = Total_RAM;
+        ram.Used_RAM = Used_RAM;
+
     }
     else {
-        std::cerr << "Failed to get memory status." << std::endl;
+        //std::cerr << "Failed to get memory status." << std::endl;
     }
 }
 
 void sysinfo::ListDrives(std::vector<std::wstring>& paths) {
     DWORD drives = GetLogicalDrives();
     if (drives == 0) {
-        std::cerr << "GetLogicalDrives failed with error: " << GetLastError() << std::endl;
+        //std::cerr << "GetLogicalDrives failed with error: " << GetLastError() << std::endl;
         return;
     }
 
@@ -93,20 +90,18 @@ void sysinfo::getDiskUsage(const std::wstring& path, struct Disk& disk) {
         ULONGLONG usedBytes = totalNumberOfBytes.QuadPart - totalNumberOfFreeBytes.QuadPart;
         double usedPercentage = (static_cast<double>(usedBytes) / totalNumberOfBytes.QuadPart) * 100.0;
 
-        disk.path = wstring_to_string(path);
-        disk.totalsize = totalNumberOfBytes.QuadPart / (1024 * 1024 * 1024);
-        disk.usedspace = usedBytes / (1024 * 1024 * 1024);
-        disk.freespace = totalNumberOfFreeBytes.QuadPart / (1024 * 1024 * 1024);
-        disk.percentage = usedPercentage;
-        std::wcout << L"Disk Path: " << path << std::endl;
-        std::wcout << L"Total Size: " << totalNumberOfBytes.QuadPart / (1024 * 1024 * 1024) << L" GB" << std::endl;
-        std::wcout << L"Used Space: " << usedBytes / (1024 * 1024 * 1024) << L" GB" << std::endl;
-        std::wcout << L"Free Space: " << totalNumberOfFreeBytes.QuadPart / (1024 * 1024 * 1024) << L" GB" << std::endl;
-        std::wcout << L"Percentage Used: " << usedPercentage << L"%" << std::endl;
+        disk.Path = WstringToString(path);
+        disk.Total_Size = totalNumberOfBytes.QuadPart;
+        disk.Used_Space = usedBytes;
+        //std::wcout << L"Disk Path: " << path << std::endl;
+        //std::wcout << L"Total Size: " << totalNumberOfBytes.QuadPart / (1024 * 1024 * 1024) << L" GB" << std::endl;
+        //std::wcout << L"Used Space: " << usedBytes / (1024 * 1024 * 1024) << L" GB" << std::endl;
+        //std::wcout << L"Free Space: " << totalNumberOfFreeBytes.QuadPart / (1024 * 1024 * 1024) << L" GB" << std::endl;
+        //std::wcout << L"Percentage Used: " << usedPercentage << L"%" << std::endl;
 
     }
     else {
-        std::cerr << "Failed to get disk space information." << std::endl;
+        //std::cerr << "Failed to get disk space information." << std::endl;
     }
     return;
 }
@@ -135,10 +130,10 @@ bool sysinfo::IsRunningInVirtualMachine() {
         isVirtualMachine = true;
     }
     if (isVirtualMachine) {
-        std::cout << "The system is running in a virtual machine." << std::endl;
+        //std::cout << "The system is running in a virtual machine." << std::endl;
     }
     else {
-        std::cout << "The system is running on physical hardware." << std::endl;
+        //std::cout << "The system is running on physical hardware." << std::endl;
     }
     return isVirtualMachine;
 
@@ -170,13 +165,13 @@ std::string sysinfo::GetAdapterFriendlyName(PIP_ADAPTER_INFO pAdapterInfo)
 #endif
         }
         else {
-            std::cerr << "Failed to query registry value. Error: " << lResult << std::endl;
+            //std::cerr << "Failed to query registry value. Error: " << lResult << std::endl;
         }
 
         RegCloseKey(hKey);
     }
     else {
-        std::cerr << "Failed to open registry key. Error: " << lResult << std::endl;
+        //std::cerr << "Failed to open registry key. Error: " << lResult << std::endl;
     }
 
     return friendlyName;
@@ -190,7 +185,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
 
     pAdapterInfo = (IP_ADAPTER_INFO*)malloc(ulOutBufLen);
     if (pAdapterInfo == NULL) {
-        std::cerr << "Error allocating memory for GetAdaptersInfo\n";
+        //std::cerr << "Error allocating memory for GetAdaptersInfo\n";
         return;
     }
 
@@ -199,7 +194,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
         free(pAdapterInfo);
         pAdapterInfo = (IP_ADAPTER_INFO*)malloc(ulOutBufLen);
         if (pAdapterInfo == NULL) {
-            std::cerr << "Error allocating memory for GetAdaptersInfo\n";
+            //std::cerr << "Error allocating memory for GetAdaptersInfo\n";
             return;
         }
     }
@@ -210,33 +205,33 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
         while (pAdapter) {
             struct Network network;
             std::string fname = GetAdapterFriendlyName(pAdapter);
-            printf("Adapter Desc: %s\n", pAdapter->Description);
-            printf("IP Address: %s\n", pAdapter->IpAddressList.IpAddress.String);
-            printf("IP Mask: %s\n", pAdapter->IpAddressList.IpMask.String);
-            printf("Gateway: %s\n", pAdapter->GatewayList.IpAddress.String);
-            network.friendly_name = fname;
+            //printf("Adapter Desc: %s\n", pAdapter->Description);
+            //printf("IP Address: %s\n", pAdapter->IpAddressList.IpAddress.String);
+            //printf("IP Mask: %s\n", pAdapter->IpAddressList.IpMask.String);
+            //printf("Gateway: %s\n", pAdapter->GatewayList.IpAddress.String);
+            network.Friendly_Name = fname;
             network.Adapter_Desc = pAdapter->Description;
-            network.ip_address = pAdapter->IpAddressList.IpAddress.String;
-            network.ip_mask = pAdapter->IpAddressList.IpMask.String;
-            network.gateway = pAdapter->GatewayList.IpAddress.String;
+            network.Ip_Address = pAdapter->IpAddressList.IpAddress.String;
+            network.Ip_Mask = pAdapter->IpAddressList.IpMask.String;
+            network.Gateway = pAdapter->GatewayList.IpAddress.String;
 
 
             if (pAdapter->DhcpEnabled) {
-                printf("DHCP Server: %s\n", pAdapter->DhcpServer.IpAddress.String);
-                network.dhcp_server = pAdapter->DhcpServer.IpAddress.String;
+                //printf("DHCP Server: %s\n", pAdapter->DhcpServer.IpAddress.String);
+                network.Dhcp_Server = pAdapter->DhcpServer.IpAddress.String;
             }
             else {
-                printf("DHCP Enabled: No\n");
-                network.dhcp_server = "Dhcp servet disabled";
+                //printf("DHCP Enabled: No\n");
+                network.Dhcp_Server = "Dhcp servet disabled";
             }
-            printf("\n");
+            //printf("\n");
 
             networks.push_back(network);
             pAdapter = pAdapter->Next;
         }
     }
     else {
-        std::cerr << "GetAdaptersInfo failed.\n";
+        //std::cerr << "GetAdaptersInfo failed.\n";
     }
 
     if (pAdapterInfo)

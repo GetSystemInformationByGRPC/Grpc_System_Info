@@ -19,46 +19,43 @@ message Empty{
 }
 
 message OsResponse{
-	string isVirtualMachine = 1;
+	string is_Virtual_Machine = 1;
 }
 
 
 message NetworkAdapterInfo{
-	string friendly_name = 1;
+	string Friendly_Name = 1;
 	string Adapter_Desc = 2;
-	string ip_address = 3;
-	string ip_mask = 4;
-	string gateway = 5;
-	string dhcp_server = 6;
+	string Ip_Address = 3;
+	string Ip_Mask = 4;
+	string Gateway = 5;
+	string Dhcp_Server = 6;
 
 }
 
 message NetworkResponse{
-	repeated NetworkAdapterInfo networks_adapter = 1;
+	repeated NetworkAdapterInfo Networks_Adapter = 1;
 } 
 
 message DiskInfo{
-	string path = 1;
-	int64 totalsize = 2;
-	int64 usedspace = 3;
-	int64 freespace = 4;
-	int64 usedpercent = 5;
+	string Path = 1;
+	int64 Total_Size = 2;
+	int64 Used_Space = 3;
 }
 
 message DiskResponse{
-	repeated DiskInfo drives = 1;
+	repeated DiskInfo Drives = 1;
 }
 
 message RAMResponse {
-  int64 totalRAMinGB = 1;
-  int64 usedRAMinGB = 2;
-  int64 totalRAMinMB = 3;
-  int64 usedRAMinMB = 4;
+  int64 Total_RAM = 1;
+  int64 Used_RAM = 2;
+  
 }
 	
 
 message CPUResponse{
-	int64 avgCPUusage = 1;
+	int64 Avg_CPU_Utilization = 1;
 }
 
 
