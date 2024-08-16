@@ -10,6 +10,8 @@
 #include <string>
 #include <codecvt>
 #include <tchar.h>
+#include "Logger.h"
+
 
 #pragma comment(lib, "Iphlpapi.lib")
 
@@ -87,7 +89,7 @@ public:
             }
 
             double averageCpuUsage = totalCpuUsage / numCores;
-            std::cout << "Average CPU Usage: " << averageCpuUsage << "%" << std::endl;
+            //Logger::debug("Average CPU Usage: " + std::to_string(averageCpuUsage) + "%");
             return averageCpuUsage;
         }
 

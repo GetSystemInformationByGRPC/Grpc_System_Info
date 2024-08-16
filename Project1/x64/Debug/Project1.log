@@ -1,0 +1,853 @@
+﻿C:\Users\User\source\repos\Grpc_System_Info\Project1\Project1.vcxproj(57,5): warning MSB4011: "C:\Users\User\source\vcpkg\scripts\buildsystems\msbuild\vcpkg.props" cannot be imported again. It was already imported at "C:\Users\User\AppData\Local\vcpkg\vcpkg.user.props (3,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+C:\Users\User\source\repos\Grpc_System_Info\Project1\Project1.vcxproj(168,5): warning MSB4011: "C:\Users\User\source\vcpkg\scripts\buildsystems\msbuild\vcpkg.targets" cannot be imported again. It was already imported at "C:\Users\User\AppData\Local\vcpkg\vcpkg.user.targets (3,3)". This is most likely a build authoring error. This subsequent import will be ignored. 
+  FileName.cpp
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\io\coded_stream.h(1262,28): warning C4251: 'google::protobuf::io::CodedOutputStream::default_serialization_deterministic_': struct 'std::atomic<bool>' needs to have dll-interface to be used by clients of class 'google::protobuf::io::CodedOutputStream'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<bool>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(371,22): warning C4251: 'google::protobuf::internal::SerialArena::ptr_': struct 'std::atomic<char *>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::SerialArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<char *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(381,29): warning C4251: 'google::protobuf::internal::SerialArena::string_block_': struct 'std::atomic<google::protobuf::internal::StringBlock *>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::SerialArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<google::protobuf::internal::StringBlock *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(386,23): warning C4251: 'google::protobuf::internal::SerialArena::string_block_unused_': struct 'std::atomic<unsigned __int64>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::SerialArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<unsigned __int64>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(388,28): warning C4251: 'google::protobuf::internal::SerialArena::head_': struct 'std::atomic<google::protobuf::internal::ArenaBlock *>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::SerialArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<google::protobuf::internal::ArenaBlock *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(389,23): warning C4251: 'google::protobuf::internal::SerialArena::space_used_': struct 'std::atomic<unsigned __int64>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::SerialArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<unsigned __int64>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(390,23): warning C4251: 'google::protobuf::internal::SerialArena::space_allocated_': struct 'std::atomic<unsigned __int64>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::SerialArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<unsigned __int64>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\thread_safe_arena.h(138,29): warning C4251: 'google::protobuf::internal::ThreadSafeArena::alloc_policy_': class 'google::protobuf::internal::TaggedAllocationPolicyPtr' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::ThreadSafeArena'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\arena_allocation_policy.h(41,7):
+  see declaration of 'google::protobuf::internal::TaggedAllocationPolicyPtr'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\thread_safe_arena.h(139,30): warning C4251: 'google::protobuf::internal::ThreadSafeArena::arena_stats_': class 'google::protobuf::internal::ThreadSafeArenaStatsHandle' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::ThreadSafeArena'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\arenaz_sampler.h(175,7):
+  see declaration of 'google::protobuf::internal::ThreadSafeArenaStatsHandle'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\thread_safe_arena.h(142,15): warning C4251: 'google::protobuf::internal::ThreadSafeArena::mutex_': class 'absl::lts_20240722::Mutex' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::ThreadSafeArena'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\synchronization\mutex.h(151,48):
+  see declaration of 'absl::lts_20240722::Mutex'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\thread_safe_arena.h(144,34): warning C4251: 'google::protobuf::internal::ThreadSafeArena::head_': struct 'std::atomic<google::protobuf::internal::ThreadSafeArena::SerialArenaChunk *>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::ThreadSafeArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<google::protobuf::internal::ThreadSafeArena::SerialArenaChunk *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\thread_safe_arena.h(241,39): warning C4251: 'google::protobuf::internal::ThreadSafeArena::lifecycle_id_': struct 'std::atomic<unsigned __int64>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::ThreadSafeArena'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<unsigned __int64>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\arenastring.h(60,43): warning C4251: 'google::protobuf::internal::LazyString::inited_': struct 'std::atomic<const std::string *>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::LazyString'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<const std::string *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\metadata_lite.h(248,15): warning C4251: 'google::protobuf::internal::LiteUnknownFieldSetter::buffer_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::LiteUnknownFieldSetter'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring(2337,7):
+  see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\message_lite.h(117,23): warning C4251: 'google::protobuf::internal::CachedSize::atom_': struct 'std::atomic<int>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::CachedSize'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic(2165,8):
+  see declaration of 'std::atomic<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\io\zero_copy_stream_impl_lite.h(234,30): warning C4251: 'google::protobuf::io::CopyingInputStreamAdaptor::buffer_': class 'std::unique_ptr<uint8_t [],std::default_delete<uint8_t []>>' needs to have dll-interface to be used by clients of class 'google::protobuf::io::CopyingInputStreamAdaptor'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3172,7):
+  see declaration of 'std::unique_ptr<uint8_t [],std::default_delete<uint8_t []>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\io\zero_copy_stream_impl_lite.h(328,30): warning C4251: 'google::protobuf::io::CopyingOutputStreamAdaptor::buffer_': class 'std::unique_ptr<uint8_t [],std::default_delete<uint8_t []>>' needs to have dll-interface to be used by clients of class 'google::protobuf::io::CopyingOutputStreamAdaptor'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3172,7):
+  see declaration of 'std::unique_ptr<uint8_t [],std::default_delete<uint8_t []>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\io\zero_copy_stream_impl_lite.h(402,28): warning C4251: 'google::protobuf::io::CordInputStream::it_': class 'absl::lts_20240722::Cord::CharIterator' needs to have dll-interface to be used by clients of class 'google::protobuf::io::CordInputStream'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\strings\cord.h(629,9):
+  see declaration of 'absl::lts_20240722::Cord::CharIterator'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\io\zero_copy_stream_impl_lite.h(486,14): warning C4251: 'google::protobuf::io::CordOutputStream::cord_': class 'absl::lts_20240722::Cord' needs to have dll-interface to be used by clients of class 'google::protobuf::io::CordOutputStream'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\strings\cord.h(174,7):
+  see declaration of 'absl::lts_20240722::Cord'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\io\zero_copy_stream_impl_lite.h(489,20): warning C4251: 'google::protobuf::io::CordOutputStream::buffer_': class 'absl::lts_20240722::CordBuffer' needs to have dll-interface to be used by clients of class 'google::protobuf::io::CordOutputStream'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\strings\cord_buffer.h(105,7):
+  see declaration of 'absl::lts_20240722::CordBuffer'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1059,26): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_int32_t_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1060,26): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_int64_t_': class 'google::protobuf::RepeatedField<int64_t>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int64_t>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1061,27): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_uint32_t_': class 'google::protobuf::RepeatedField<uint32_t>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<uint32_t>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1062,27): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_uint64_t_': class 'google::protobuf::RepeatedField<uint64_t>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<uint64_t>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1063,25): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_double_': class 'google::protobuf::RepeatedField<double>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<double>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1064,24): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_float_': class 'google::protobuf::RepeatedField<float>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<float>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\extension_set.h(1065,23): warning C4251: 'google::protobuf::internal::RepeatedPrimitiveDefaults::default_repeated_field_bool_': class 'google::protobuf::RepeatedField<bool>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::RepeatedPrimitiveDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<bool>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2461,27): warning C4251: 'google::protobuf::DescriptorPool::tables_': class 'std::unique_ptr<google::protobuf::DescriptorPool::Tables,std::default_delete<google::protobuf::DescriptorPool::Tables>>' needs to have dll-interface to be used by clients of class 'google::protobuf::DescriptorPool'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3172,7):
+  see declaration of 'std::unique_ptr<google::protobuf::DescriptorPool::Tables,std::default_delete<google::protobuf::DescriptorPool::Tables>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2474,42): warning C4251: 'google::protobuf::DescriptorPool::unused_import_track_files_': class 'absl::lts_20240722::flat_hash_map<std::string,bool,absl::lts_20240722::container_internal::StringHash,absl::lts_20240722::container_internal::StringEq,std::allocator<std::pair<const K,V>>>' needs to have dll-interface to be used by clients of class 'google::protobuf::DescriptorPool'
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2474,42): warning C4251:         with
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2474,42): warning C4251:         [
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2474,42): warning C4251:             K=std::string,
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2474,42): warning C4251:             V=bool
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2474,42): warning C4251:         ]
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\container\flat_hash_map.h(128,37):
+  see declaration of 'absl::lts_20240722::flat_hash_map<std::string,bool,absl::lts_20240722::container_internal::StringHash,absl::lts_20240722::container_internal::StringEq,std::allocator<std::pair<const K,V>>>'
+          with
+          [
+              K=std::string,
+              V=bool
+          ]
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.h(2478,39): warning C4251: 'google::protobuf::DescriptorPool::feature_set_defaults_spec_': class 'std::unique_ptr<google::protobuf::FeatureSetDefaults,std::default_delete<google::protobuf::FeatureSetDefaults>>' needs to have dll-interface to be used by clients of class 'google::protobuf::DescriptorPool'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3172,7):
+  see declaration of 'std::unique_ptr<google::protobuf::FeatureSetDefaults,std::default_delete<google::protobuf::FeatureSetDefaults>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\unknown_field_set.h(190,29): warning C4251: 'google::protobuf::UnknownFieldSet::fields_': class 'std::vector<google::protobuf::UnknownField,std::allocator<google::protobuf::UnknownField>>' needs to have dll-interface to be used by clients of class 'google::protobuf::UnknownFieldSet'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector(436,7):
+  see declaration of 'std::vector<google::protobuf::UnknownField,std::allocator<google::protobuf::UnknownField>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\map.h(773,13): warning C4251: 'google::protobuf::internal::UntypedMapBase::alloc_': class 'google::protobuf::internal::MapAllocator<void *>' needs to have dll-interface to be used by clients of class 'google::protobuf::internal::UntypedMapBase'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\map.h(98,7):
+  see declaration of 'google::protobuf::internal::MapAllocator<void *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\map.h(689,19): warning C4244: 'initializing': conversion from 'uintptr_t' to 'google::protobuf::internal::map_index_t', possible loss of data
+  (compiling source file 'FileName.cpp')
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\message.h(1027,27): warning C4251: 'google::protobuf::Reflection::tcparse_table_once_': class 'absl::lts_20240722::once_flag' needs to have dll-interface to be used by clients of class 'google::protobuf::Reflection'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\base\call_once.h(87,7):
+  see declaration of 'absl::lts_20240722::once_flag'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(876,7): warning C4251: 'google::protobuf::UninterpretedOption_NamePart::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,0,62,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::UninterpretedOption_NamePart'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,0,62,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(891,46): warning C4251: 'google::protobuf::UninterpretedOption_NamePart::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::UninterpretedOption_NamePart::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1145,7): warning C4251: 'google::protobuf::SourceCodeInfo_Location::_table_': struct 'google::protobuf::internal::TcParseTable<3,5,0,106,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::SourceCodeInfo_Location'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,5,0,106,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1160,46): warning C4251: 'google::protobuf::SourceCodeInfo_Location::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::SourceCodeInfo_Location::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1162,50): warning C4251: 'google::protobuf::SourceCodeInfo_Location::Impl_::path_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of struct 'google::protobuf::SourceCodeInfo_Location::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1164,50): warning C4251: 'google::protobuf::SourceCodeInfo_Location::Impl_::span_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of struct 'google::protobuf::SourceCodeInfo_Location::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1166,55): warning C4251: 'google::protobuf::SourceCodeInfo_Location::Impl_::leading_detached_comments_': class 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>' needs to have dll-interface to be used by clients of struct 'google::protobuf::SourceCodeInfo_Location::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1410,7): warning C4251: 'google::protobuf::GeneratedCodeInfo_Annotation::_table_': struct 'google::protobuf::internal::TcParseTable<3,5,1,64,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::GeneratedCodeInfo_Annotation'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,5,1,64,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1425,46): warning C4251: 'google::protobuf::GeneratedCodeInfo_Annotation::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::GeneratedCodeInfo_Annotation::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1427,50): warning C4251: 'google::protobuf::GeneratedCodeInfo_Annotation::Impl_::path_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of struct 'google::protobuf::GeneratedCodeInfo_Annotation::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1610,7): warning C4251: 'google::protobuf::FieldOptions_EditionDefault::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,1,57,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FieldOptions_EditionDefault'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,1,57,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(1625,46): warning C4251: 'google::protobuf::FieldOptions_EditionDefault::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FieldOptions_EditionDefault::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2152,7): warning C4251: 'google::protobuf::FeatureSet::_table_': struct 'google::protobuf::internal::TcParseTable<3,6,6,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FeatureSet'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,6,6,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2169,46): warning C4251: 'google::protobuf::FeatureSet::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FeatureSet::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2396,7): warning C4251: 'google::protobuf::ExtensionRangeOptions_Declaration::_table_': struct 'google::protobuf::internal::TcParseTable<3,5,0,71,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::ExtensionRangeOptions_Declaration'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,5,0,71,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2411,46): warning C4251: 'google::protobuf::ExtensionRangeOptions_Declaration::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ExtensionRangeOptions_Declaration::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2589,7): warning C4251: 'google::protobuf::EnumDescriptorProto_EnumReservedRange::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,0,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::EnumDescriptorProto_EnumReservedRange'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,0,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2604,46): warning C4251: 'google::protobuf::EnumDescriptorProto_EnumReservedRange::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumDescriptorProto_EnumReservedRange::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2779,7): warning C4251: 'google::protobuf::DescriptorProto_ReservedRange::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,0,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::DescriptorProto_ReservedRange'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,0,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(2794,46): warning C4251: 'google::protobuf::DescriptorProto_ReservedRange::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto_ReservedRange::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3056,7): warning C4251: 'google::protobuf::UninterpretedOption::_table_': struct 'google::protobuf::internal::TcParseTable<3,7,1,75,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::UninterpretedOption'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,7,1,75,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3071,46): warning C4251: 'google::protobuf::UninterpretedOption::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::UninterpretedOption::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3073,94): warning C4251: 'google::protobuf::UninterpretedOption::Impl_::name_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption_NamePart>' needs to have dll-interface to be used by clients of struct 'google::protobuf::UninterpretedOption::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption_NamePart>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3248,7): warning C4251: 'google::protobuf::SourceCodeInfo::_table_': struct 'google::protobuf::internal::TcParseTable<0,1,1,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::SourceCodeInfo'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<0,1,1,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3263,89): warning C4251: 'google::protobuf::SourceCodeInfo::Impl_::location_': class 'google::protobuf::RepeatedPtrField<google::protobuf::SourceCodeInfo_Location>' needs to have dll-interface to be used by clients of struct 'google::protobuf::SourceCodeInfo::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::SourceCodeInfo_Location>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3433,7): warning C4251: 'google::protobuf::GeneratedCodeInfo::_table_': struct 'google::protobuf::internal::TcParseTable<0,1,1,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::GeneratedCodeInfo'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<0,1,1,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3448,94): warning C4251: 'google::protobuf::GeneratedCodeInfo::Impl_::annotation_': class 'google::protobuf::RepeatedPtrField<google::protobuf::GeneratedCodeInfo_Annotation>' needs to have dll-interface to be used by clients of struct 'google::protobuf::GeneratedCodeInfo::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::GeneratedCodeInfo_Annotation>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3625,7): warning C4251: 'google::protobuf::FeatureSetDefaults_FeatureSetEditionDefault::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,2,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FeatureSetDefaults_FeatureSetEditionDefault'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,2,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(3640,46): warning C4251: 'google::protobuf::FeatureSetDefaults_FeatureSetEditionDefault::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FeatureSetDefaults_FeatureSetEditionDefault::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4015,7): warning C4251: 'google::protobuf::ServiceOptions::_table_': struct 'google::protobuf::internal::TcParseTable<2,3,2,0,12>' needs to have dll-interface to be used by clients of class 'google::protobuf::ServiceOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<2,3,2,0,12>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4032,46): warning C4251: 'google::protobuf::ServiceOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ServiceOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4034,85): warning C4251: 'google::protobuf::ServiceOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ServiceOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4396,7): warning C4251: 'google::protobuf::OneofOptions::_table_': struct 'google::protobuf::internal::TcParseTable<2,2,2,0,7>' needs to have dll-interface to be used by clients of class 'google::protobuf::OneofOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<2,2,2,0,7>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4413,46): warning C4251: 'google::protobuf::OneofOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::OneofOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4415,85): warning C4251: 'google::protobuf::OneofOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::OneofOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4821,7): warning C4251: 'google::protobuf::MethodOptions::_table_': struct 'google::protobuf::internal::TcParseTable<3,4,3,0,12>' needs to have dll-interface to be used by clients of class 'google::protobuf::MethodOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,4,3,0,12>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4838,46): warning C4251: 'google::protobuf::MethodOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::MethodOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(4840,85): warning C4251: 'google::protobuf::MethodOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::MethodOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(5263,7): warning C4251: 'google::protobuf::MessageOptions::_table_': struct 'google::protobuf::internal::TcParseTable<3,7,2,0,7>' needs to have dll-interface to be used by clients of class 'google::protobuf::MessageOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,7,2,0,7>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(5280,46): warning C4251: 'google::protobuf::MessageOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::MessageOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(5282,85): warning C4251: 'google::protobuf::MessageOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::MessageOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(5969,7): warning C4251: 'google::protobuf::FileOptions::_table_': struct 'google::protobuf::internal::TcParseTable<5,22,3,202,12>' needs to have dll-interface to be used by clients of class 'google::protobuf::FileOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<5,22,3,202,12>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(5986,46): warning C4251: 'google::protobuf::FileOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(5988,85): warning C4251: 'google::protobuf::FileOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6609,7): warning C4251: 'google::protobuf::FieldOptions::_table_': struct 'google::protobuf::internal::TcParseTable<4,13,7,0,7>' needs to have dll-interface to be used by clients of class 'google::protobuf::FieldOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<4,13,7,0,7>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6626,46): warning C4251: 'google::protobuf::FieldOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FieldOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6628,44): warning C4251: 'google::protobuf::FieldOptions::Impl_::targets_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FieldOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6629,93): warning C4251: 'google::protobuf::FieldOptions::Impl_::edition_defaults_': class 'google::protobuf::RepeatedPtrField<google::protobuf::FieldOptions_EditionDefault>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FieldOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::FieldOptions_EditionDefault>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6630,85): warning C4251: 'google::protobuf::FieldOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FieldOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6833,7): warning C4251: 'google::protobuf::FeatureSetDefaults::_table_': struct 'google::protobuf::internal::TcParseTable<1,3,3,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FeatureSetDefaults'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,3,3,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6848,46): warning C4251: 'google::protobuf::FeatureSetDefaults::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FeatureSetDefaults::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(6850,109): warning C4251: 'google::protobuf::FeatureSetDefaults::Impl_::defaults_': class 'google::protobuf::RepeatedPtrField<google::protobuf::FeatureSetDefaults_FeatureSetEditionDefault>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FeatureSetDefaults::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::FeatureSetDefaults_FeatureSetEditionDefault>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7265,7): warning C4251: 'google::protobuf::ExtensionRangeOptions::_table_': struct 'google::protobuf::internal::TcParseTable<3,4,4,0,12>' needs to have dll-interface to be used by clients of class 'google::protobuf::ExtensionRangeOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,4,4,0,12>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7282,46): warning C4251: 'google::protobuf::ExtensionRangeOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ExtensionRangeOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7284,99): warning C4251: 'google::protobuf::ExtensionRangeOptions::Impl_::declaration_': class 'google::protobuf::RepeatedPtrField<google::protobuf::ExtensionRangeOptions_Declaration>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ExtensionRangeOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::ExtensionRangeOptions_Declaration>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7285,85): warning C4251: 'google::protobuf::ExtensionRangeOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ExtensionRangeOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7671,7): warning C4251: 'google::protobuf::EnumValueOptions::_table_': struct 'google::protobuf::internal::TcParseTable<3,4,2,0,7>' needs to have dll-interface to be used by clients of class 'google::protobuf::EnumValueOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,4,2,0,7>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7688,46): warning C4251: 'google::protobuf::EnumValueOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumValueOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(7690,85): warning C4251: 'google::protobuf::EnumValueOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumValueOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8089,7): warning C4251: 'google::protobuf::EnumOptions::_table_': struct 'google::protobuf::internal::TcParseTable<3,5,2,0,7>' needs to have dll-interface to be used by clients of class 'google::protobuf::EnumOptions'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,5,2,0,7>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8106,46): warning C4251: 'google::protobuf::EnumOptions::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8108,85): warning C4251: 'google::protobuf::EnumOptions::Impl_::uninterpreted_option_': class 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumOptions::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::UninterpretedOption>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8294,7): warning C4251: 'google::protobuf::OneofDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,1,49,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::OneofDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,1,49,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8309,46): warning C4251: 'google::protobuf::OneofDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::OneofDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8554,7): warning C4251: 'google::protobuf::MethodDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<3,6,1,71,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::MethodDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,6,1,71,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8569,46): warning C4251: 'google::protobuf::MethodDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::MethodDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8947,7): warning C4251: 'google::protobuf::FieldDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<4,11,3,96,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FieldDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<4,11,3,96,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(8962,46): warning C4251: 'google::protobuf::FieldDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FieldDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9168,7): warning C4251: 'google::protobuf::EnumValueDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<2,3,1,53,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::EnumValueDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<2,3,1,53,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9183,46): warning C4251: 'google::protobuf::EnumValueDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumValueDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9375,7): warning C4251: 'google::protobuf::DescriptorProto_ExtensionRange::_table_': struct 'google::protobuf::internal::TcParseTable<2,3,1,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::DescriptorProto_ExtensionRange'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<2,3,1,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9390,46): warning C4251: 'google::protobuf::DescriptorProto_ExtensionRange::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto_ExtensionRange::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9595,7): warning C4251: 'google::protobuf::ServiceDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<2,3,2,51,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::ServiceDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<2,3,2,51,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9610,46): warning C4251: 'google::protobuf::ServiceDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ServiceDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9612,87): warning C4251: 'google::protobuf::ServiceDescriptorProto::Impl_::method_': class 'google::protobuf::RepeatedPtrField<google::protobuf::MethodDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::ServiceDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::MethodDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9865,7): warning C4251: 'google::protobuf::EnumDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<3,5,3,61,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::EnumDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,5,3,61,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9880,46): warning C4251: 'google::protobuf::EnumDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9882,90): warning C4251: 'google::protobuf::EnumDescriptorProto::Impl_::value_': class 'google::protobuf::RepeatedPtrField<google::protobuf::EnumValueDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::EnumValueDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9883,103): warning C4251: 'google::protobuf::EnumDescriptorProto::Impl_::reserved_range_': class 'google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto_EnumReservedRange>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto_EnumReservedRange>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(9884,55): warning C4251: 'google::protobuf::EnumDescriptorProto::Impl_::reserved_name_': class 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10233,7): warning C4251: 'google::protobuf::DescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<4,10,8,65,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::DescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<4,10,8,65,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10248,46): warning C4251: 'google::protobuf::DescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10250,86): warning C4251: 'google::protobuf::DescriptorProto::Impl_::field_': class 'google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10251,81): warning C4251: 'google::protobuf::DescriptorProto::Impl_::nested_type_': class 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10252,85): warning C4251: 'google::protobuf::DescriptorProto::Impl_::enum_type_': class 'google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10253,96): warning C4251: 'google::protobuf::DescriptorProto::Impl_::extension_range_': class 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto_ExtensionRange>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto_ExtensionRange>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10254,86): warning C4251: 'google::protobuf::DescriptorProto::Impl_::extension_': class 'google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10255,86): warning C4251: 'google::protobuf::DescriptorProto::Impl_::oneof_decl_': class 'google::protobuf::RepeatedPtrField<google::protobuf::OneofDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::OneofDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10256,95): warning C4251: 'google::protobuf::DescriptorProto::Impl_::reserved_range_': class 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto_ReservedRange>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto_ReservedRange>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10257,55): warning C4251: 'google::protobuf::DescriptorProto::Impl_::reserved_name_': class 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>' needs to have dll-interface to be used by clients of struct 'google::protobuf::DescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10648,7): warning C4251: 'google::protobuf::FileDescriptorProto::_table_': struct 'google::protobuf::internal::TcParseTable<4,13,7,79,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FileDescriptorProto'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<4,13,7,79,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10663,46): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10665,55): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::dependency_': class 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10666,81): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::message_type_': class 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::DescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10667,85): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::enum_type_': class 'google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::EnumDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10668,88): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::service_': class 'google::protobuf::RepeatedPtrField<google::protobuf::ServiceDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::ServiceDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10669,86): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::extension_': class 'google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::FieldDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10670,50): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::public_dependency_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10671,50): warning C4251: 'google::protobuf::FileDescriptorProto::Impl_::weak_dependency_': class 'google::protobuf::RepeatedField<int>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorProto::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_field.h(109,7):
+  see declaration of 'google::protobuf::RepeatedField<int>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10844,7): warning C4251: 'google::protobuf::FileDescriptorSet::_table_': struct 'google::protobuf::internal::TcParseTable<0,1,1,0,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::FileDescriptorSet'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<0,1,1,0,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor.pb.h(10859,85): warning C4251: 'google::protobuf::FileDescriptorSet::Impl_::file_': class 'google::protobuf::RepeatedPtrField<google::protobuf::FileDescriptorProto>' needs to have dll-interface to be used by clients of struct 'google::protobuf::FileDescriptorSet::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::FileDescriptorProto>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor_database.h(252,47): warning C4251: 'google::protobuf::SimpleDescriptorDatabase::index_': class 'google::protobuf::SimpleDescriptorDatabase::DescriptorIndex<const google::protobuf::FileDescriptorProto *>' needs to have dll-interface to be used by clients of class 'google::protobuf::SimpleDescriptorDatabase'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor_database.h(177,9):
+  see declaration of 'google::protobuf::SimpleDescriptorDatabase::DescriptorIndex<const google::protobuf::FileDescriptorProto *>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor_database.h(253,59): warning C4251: 'google::protobuf::SimpleDescriptorDatabase::files_to_delete_': class 'std::vector<std::unique_ptr<const google::protobuf::FileDescriptorProto,std::default_delete<const google::protobuf::FileDescriptorProto>>,std::allocator<std::unique_ptr<const google::protobuf::FileDescriptorProto,std::default_delete<const google::protobuf::FileDescriptorProto>>>>' needs to have dll-interface to be used by clients of class 'google::protobuf::SimpleDescriptorDatabase'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector(436,7):
+  see declaration of 'std::vector<std::unique_ptr<const google::protobuf::FileDescriptorProto,std::default_delete<const google::protobuf::FileDescriptorProto>>,std::allocator<std::unique_ptr<const google::protobuf::FileDescriptorProto,std::default_delete<const google::protobuf::FileDescriptorProto>>>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor_database.h(305,36): warning C4251: 'google::protobuf::EncodedDescriptorDatabase::index_': class 'std::unique_ptr<google::protobuf::EncodedDescriptorDatabase::DescriptorIndex,std::default_delete<google::protobuf::EncodedDescriptorDatabase::DescriptorIndex>>' needs to have dll-interface to be used by clients of class 'google::protobuf::EncodedDescriptorDatabase'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3172,7):
+  see declaration of 'std::unique_ptr<google::protobuf::EncodedDescriptorDatabase::DescriptorIndex,std::default_delete<google::protobuf::EncodedDescriptorDatabase::DescriptorIndex>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor_database.h(306,22): warning C4251: 'google::protobuf::EncodedDescriptorDatabase::files_to_delete_': class 'std::vector<void *,std::allocator<void *>>' needs to have dll-interface to be used by clients of class 'google::protobuf::EncodedDescriptorDatabase'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector(436,7):
+  see declaration of 'std::vector<void *,std::allocator<void *>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\descriptor_database.h(372,36): warning C4251: 'google::protobuf::MergedDescriptorDatabase::sources_': class 'std::vector<google::protobuf::DescriptorDatabase *,std::allocator<google::protobuf::DescriptorDatabase *>>' needs to have dll-interface to be used by clients of class 'google::protobuf::MergedDescriptorDatabase'
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector(436,7):
+  see declaration of 'std::vector<google::protobuf::DescriptorDatabase *,std::allocator<google::protobuf::DescriptorDatabase *>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\any.pb.h(284,7): warning C4251: 'google::protobuf::Any::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,0,36,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::Any'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,0,36,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\source_context.pb.h(232,7): warning C4251: 'google::protobuf::SourceContext::_table_': struct 'google::protobuf::internal::TcParseTable<0,1,0,47,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::SourceContext'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<0,1,0,47,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(382,7): warning C4251: 'google::protobuf::Option::_table_': struct 'google::protobuf::internal::TcParseTable<1,2,1,35,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::Option'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<1,2,1,35,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(397,46): warning C4251: 'google::protobuf::Option::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Option::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(749,7): warning C4251: 'google::protobuf::Field::_table_': struct 'google::protobuf::internal::TcParseTable<4,10,1,72,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::Field'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<4,10,1,72,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(764,72): warning C4251: 'google::protobuf::Field::Impl_::options_': class 'google::protobuf::RepeatedPtrField<google::protobuf::Option>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Field::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::Option>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(969,7): warning C4251: 'google::protobuf::EnumValue::_table_': struct 'google::protobuf::internal::TcParseTable<2,3,1,38,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::EnumValue'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<2,3,1,38,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(984,72): warning C4251: 'google::protobuf::EnumValue::Impl_::options_': class 'google::protobuf::RepeatedPtrField<google::protobuf::Option>' needs to have dll-interface to be used by clients of struct 'google::protobuf::EnumValue::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::Option>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1263,7): warning C4251: 'google::protobuf::Type::_table_': struct 'google::protobuf::internal::TcParseTable<3,7,3,46,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::Type'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,7,3,46,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1278,46): warning C4251: 'google::protobuf::Type::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Type::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1280,71): warning C4251: 'google::protobuf::Type::Impl_::fields_': class 'google::protobuf::RepeatedPtrField<google::protobuf::Field>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Type::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::Field>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1281,55): warning C4251: 'google::protobuf::Type::Impl_::oneofs_': class 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Type::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1282,72): warning C4251: 'google::protobuf::Type::Impl_::options_': class 'google::protobuf::RepeatedPtrField<google::protobuf::Option>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Type::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::Option>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1533,7): warning C4251: 'google::protobuf::Enum::_table_': struct 'google::protobuf::internal::TcParseTable<3,6,3,40,2>' needs to have dll-interface to be used by clients of class 'google::protobuf::Enum'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\generated_message_tctable_decl.h(458,8):
+  see declaration of 'google::protobuf::internal::TcParseTable<3,6,3,40,2>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1548,46): warning C4251: 'google::protobuf::Enum::Impl_::_has_bits_': class 'google::protobuf::internal::HasBits<1>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Enum::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\has_bits.h(28,7):
+  see declaration of 'google::protobuf::internal::HasBits<1>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1550,75): warning C4251: 'google::protobuf::Enum::Impl_::enumvalue_': class 'google::protobuf::RepeatedPtrField<google::protobuf::EnumValue>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Enum::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::EnumValue>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1551,72): warning C4251: 'google::protobuf::Enum::Impl_::options_': class 'google::protobuf::RepeatedPtrField<google::protobuf::Option>' needs to have dll-interface to be used by clients of struct 'google::protobuf::Enum::Impl_'
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\repeated_ptr_field.h(986,7):
+  see declaration of 'google::protobuf::RepeatedPtrField<google::protobuf::Option>'
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\grpcpp\support\proto_buffer_reader.h(153,16): warning C4244: '-=': conversion from 'int64_t' to 'int', possible loss of data
+  (compiling source file 'FileName.cpp')
+  
+C:\Users\User\source\vcpkg\installed\x64-windows\include\grpcpp\support\proto_buffer_reader.h(166,18): warning C4244: '-=': conversion from 'uint64_t' to 'int', possible loss of data
+  (compiling source file 'FileName.cpp')
+  
+C:\Users\User\source\repos\Grpc_System_Info\Project1\FileName.cpp(194,58): warning C4244: 'argument': conversion from 'double' to 'int64_t', possible loss of data
+C:\Users\User\source\repos\Grpc_System_Info\Project1\FileName.cpp(214,44): warning C4244: 'argument': conversion from 'double' to 'int64_t', possible loss of data
+C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\log\internal\check_op.h(407,1): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file 'FileName.cpp')
+  C:\Users\User\source\vcpkg\installed\x64-windows\include\absl\log\internal\check_op.h(407,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\map.h(877,7):
+  	while compiling class template 'google::protobuf::internal::KeyMapBase'
+  	C:\Users\User\source\vcpkg\installed\x64-windows\include\google\protobuf\map.h(1042,5):
+  	see reference to function template instantiation 'std::string *absl::lts_20240722::log_internal::Check_GEImpl<unsigned int,T>(const T1 &,const T2 &,const char *)' being compiled
+          with
+          [
+              T=google::protobuf::internal::UntypedMapBase::<unnamed-enum-kMinTableSize>,
+              T1=unsigned int,
+              T2=google::protobuf::internal::UntypedMapBase::<unnamed-enum-kMinTableSize>
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(4537,18): warning C4244: '=': conversion from 'wchar_t' to 'char', possible loss of data
+  (compiling source file 'FileName.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(4537,18):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\User\source\repos\Grpc_System_Info\Project1\FileName.cpp(518,24):
+  	see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  		C:\Users\User\source\repos\Grpc_System_Info\Project1\FileName.cpp(518,24):
+  		see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'wmain'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring(2600,17):
+  	see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring(2756,18):
+  	see reference to function template instantiation '_OutIt *std::_Copy_n_unchecked4<wchar_t*,_Size,char*>(_InIt,_SizeTy,_OutIt)' being compiled
+          with
+          [
+              _OutIt=char *,
+              _Size=unsigned __int64,
+              _InIt=wchar_t *,
+              _SizeTy=unsigned __int64
+          ]
+  
+  Project1.vcxproj -> C:\Users\User\source\repos\Grpc_System_Info\x64\Debug\Project1.exe

@@ -1,5 +1,12 @@
 #include "sysinfo.h"
+#include <sstream>
+#include "Logger.h"
 
+std::string convertToString1(DWORD error_code) {
+    std::ostringstream oss;
+    oss << "OpenSCManager failed, error: " << error_code;
+    return oss.str();
+}
 
 std::string sysinfo::wstring_to_string(const std::wstring& wstr) {
     std::wstring_convert<std::codecvt_utf8<wchar_t>> conv;
@@ -17,27 +24,44 @@ void sysinfo::getRAMinfo(struct RAM &ram)
 
         uint64_t  totalRAMinMB = statex.ullTotalPhys / (1024 * 1024);
         uint64_t usedRAMinMB = (statex.ullTotalPhys - statex.ullAvailPhys) / (1024 * 1024);
-
+        
         //std::cout << "Total RAM: " << totalRAMinGB << " GB" << std::endl;
         //std::cout << "Used RAM: " << usedRAMinGB << " GB" << std::endl;
 
         //std::cout << "Total RAM: " << totalRAMinMB << " MB" << std::endl;
         //std::cout << "Used RAM: " << usedRAMinMB << " MB" << std::endl;
         //std::cout << "Percent Of RAM Usage: " << (usedRAMinMB * 100) / totalRAMinMB << "% " << std::endl;
+
+        /*
+        std::string info = "Total RAM: " + std::to_string(totalRAMinGB) + " GB";
+        Logger::debug(info);
+
+        info = "Used RAM: " + std::to_string(usedRAMinGB) + " GB";
+        Logger::debug(info);
+
+        info = "Total RAM: " + std::to_string(totalRAMinMB) + " MB";
+        Logger::debug(info);
+
+        info = "Used RAM: " + std::to_string(usedRAMinMB) + " MB";
+        Logger::debug(info);
+
+        info = "Percent Of RAM Usage: " + std::to_string((usedRAMinMB * 100) / totalRAMinMB) + "% ";
+        Logger::debug(info);
+        */
         ram.totalRAMinGB = totalRAMinGB;
         ram.totalRAMinMB = totalRAMinMB;
         ram.usedRAMinGB = usedRAMinGB;
         ram.usedRAMinMB = usedRAMinMB;
     }
     else {
-        std::cerr << "Failed to get memory status." << std::endl;
+        Logger::error("Failed to get memory status.", true, true);
     }
 }
 
 void sysinfo::ListDrives(std::vector<std::wstring>& paths) {
     DWORD drives = GetLogicalDrives();
     if (drives == 0) {
-        std::cerr << "GetLogicalDrives failed with error: " << GetLastError() << std::endl;
+        Logger::error("GetLogicalDrives failed with error: " + convertToString1(GetLastError()), true, true);
         return;
     }
 
@@ -98,15 +122,20 @@ void sysinfo::getDiskUsage(const std::wstring& path, struct Disk& disk) {
         disk.usedspace = usedBytes / (1024 * 1024 * 1024);
         disk.freespace = totalNumberOfFreeBytes.QuadPart / (1024 * 1024 * 1024);
         disk.percentage = usedPercentage;
-        std::wcout << L"Disk Path: " << path << std::endl;
-        std::wcout << L"Total Size: " << totalNumberOfBytes.QuadPart / (1024 * 1024 * 1024) << L" GB" << std::endl;
-        std::wcout << L"Used Space: " << usedBytes / (1024 * 1024 * 1024) << L" GB" << std::endl;
-        std::wcout << L"Free Space: " << totalNumberOfFreeBytes.QuadPart / (1024 * 1024 * 1024) << L" GB" << std::endl;
-        std::wcout << L"Percentage Used: " << usedPercentage << L"%" << std::endl;
-
+        /*std::string msg;
+        msg = "Disk Path: " + wstring_to_string(path);
+        Logger::debug(msg, true, true);
+        msg = "Total Size: " + std::to_string((totalNumberOfBytes.QuadPart / (1024 * 1024 * 1024))) + " GB";
+        Logger::debug(msg, true, true);
+        msg = "Used Space: " + std::to_string(usedBytes / (1024 * 1024 * 1024)) + " GB";
+        Logger::debug(msg, true, true);
+        msg = "Free Space: " + std::to_string(totalNumberOfFreeBytes.QuadPart / (1024 * 1024 * 1024)) + " GB";
+        Logger::debug(msg, true, true);
+        msg = "Percentage Used: " + std::to_string(usedPercentage) + "%";
+        Logger::debug(msg, true, true);*/
     }
     else {
-        std::cerr << "Failed to get disk space information." << std::endl;
+        Logger::error("Failed to get disk space information.", true, true);
     }
     return;
 }
@@ -135,10 +164,10 @@ bool sysinfo::IsRunningInVirtualMachine() {
         isVirtualMachine = true;
     }
     if (isVirtualMachine) {
-        std::cout << "The system is running in a virtual machine." << std::endl;
+        //Logger::debug("The system is running in a virtual machine.", true, true);
     }
     else {
-        std::cout << "The system is running on physical hardware." << std::endl;
+        //Logger::debug("The system is running on physical hardware.", true, true);
     }
     return isVirtualMachine;
 
@@ -170,13 +199,15 @@ std::string sysinfo::GetAdapterFriendlyName(PIP_ADAPTER_INFO pAdapterInfo)
 #endif
         }
         else {
-            std::cerr << "Failed to query registry value. Error: " << lResult << std::endl;
+            std::string error = "Failed to query registry value. Error: " + std::to_string(lResult);
+            Logger::error(error, true, true);
         }
 
         RegCloseKey(hKey);
     }
     else {
-        std::cerr << "Failed to open registry key. Error: " << lResult << std::endl;
+        std::string error = "Failed to open registry key. Error: " + std::to_string(lResult);
+        Logger::error(error, true, true);
     }
 
     return friendlyName;
@@ -190,7 +221,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
 
     pAdapterInfo = (IP_ADAPTER_INFO*)malloc(ulOutBufLen);
     if (pAdapterInfo == NULL) {
-        std::cerr << "Error allocating memory for GetAdaptersInfo\n";
+        Logger::error("Error allocating memory for GetAdaptersInfo", true, true);
         return;
     }
 
@@ -200,6 +231,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
         pAdapterInfo = (IP_ADAPTER_INFO*)malloc(ulOutBufLen);
         if (pAdapterInfo == NULL) {
             std::cerr << "Error allocating memory for GetAdaptersInfo\n";
+            Logger::error("Error allocating memory for GetAdaptersInfo", true, true);
             return;
         }
     }
@@ -210,10 +242,13 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
         while (pAdapter) {
             struct Network network;
             std::string fname = GetAdapterFriendlyName(pAdapter);
-            printf("Adapter Desc: %s\n", pAdapter->Description);
-            printf("IP Address: %s\n", pAdapter->IpAddressList.IpAddress.String);
-            printf("IP Mask: %s\n", pAdapter->IpAddressList.IpMask.String);
-            printf("Gateway: %s\n", pAdapter->GatewayList.IpAddress.String);
+           /* std::string info = "Adapter Desc: " + std::string(pAdapter->Description);
+            Logger::debug(info, true, true);
+            info = "IP Address: " + std::string(pAdapter->IpAddressList.IpAddress.String);
+            Logger::debug(info, true, true);
+            info = "IP Mask: " + std::string(pAdapter->IpAddressList.IpMask.String);
+            Logger::debug(info, true, true);
+            info = "Gateway: " + std::string(pAdapter->GatewayList.IpAddress.String);*/
             network.friendly_name = fname;
             network.Adapter_Desc = pAdapter->Description;
             network.ip_address = pAdapter->IpAddressList.IpAddress.String;
@@ -222,21 +257,21 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
 
 
             if (pAdapter->DhcpEnabled) {
-                printf("DHCP Server: %s\n", pAdapter->DhcpServer.IpAddress.String);
+                /*std::string info = "DHCP Server: " + std::string(pAdapter->DhcpServer.IpAddress.String);
+                Logger::debug(info, true, true);*/
                 network.dhcp_server = pAdapter->DhcpServer.IpAddress.String;
             }
             else {
-                printf("DHCP Enabled: No\n");
+                //Logger::debug("DHCP Enabled: No", true, true);
                 network.dhcp_server = "Dhcp servet disabled";
             }
-            printf("\n");
 
             networks.push_back(network);
             pAdapter = pAdapter->Next;
         }
     }
     else {
-        std::cerr << "GetAdaptersInfo failed.\n";
+        Logger::error("GetAdaptersInfo failed.", true, true);
     }
 
     if (pAdapterInfo)
