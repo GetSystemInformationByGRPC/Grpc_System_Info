@@ -8,6 +8,7 @@
 #include <string>
 #include <stdlib.h>
 #include <tchar.h>
+#include "Logger.h"
 
 #pragma comment(lib, "Iphlpapi.lib")
 
@@ -23,7 +24,7 @@ void printRAMinfo()
 
         long long  totalRAMinMB = statex.ullTotalPhys / (1024 * 1024);
         long long usedRAMinMB = (statex.ullTotalPhys - statex.ullAvailPhys) / (1024 * 1024);
-
+        
         std::cout << "Total RAM: " << totalRAMinGB << " GB" << std::endl;
         std::cout << "Used RAM: " << usedRAMinGB << " GB" << std::endl;
 
@@ -74,7 +75,8 @@ public:
         }
 
         double averageCpuUsage = totalCpuUsage / numCores;
-        std::cout << "Average CPU Usage: " << averageCpuUsage << "%" << std::endl;
+        std::string info = "Average CPU Usage: " + std::to_string(averageCpuUsage) + "%";
+        Logger::debug(info);
     }
 
 private:

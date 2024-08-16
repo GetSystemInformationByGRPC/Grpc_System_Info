@@ -1,5 +1,6 @@
-C:\Users\ok\source\repos\Project1\Project1\FileName.cpp;C:\Users\ok\source\repos\Project1\Project1\x64\Release\FileName.obj
-C:\Users\ok\source\repos\Project1\Project1\getsysinfo.cpp;C:\Users\ok\source\repos\Project1\Project1\x64\Release\getsysinfo.obj
-C:\Users\ok\source\repos\Project1\Project1\sysinfo.cpp;C:\Users\ok\source\repos\Project1\Project1\x64\Release\sysinfo.obj
-C:\Users\ok\source\repos\Project1\Project1\SysInfo.grpc.pb.cc;C:\Users\ok\source\repos\Project1\Project1\x64\Release\SysInfo.grpc.pb.obj
-C:\Users\ok\source\repos\Project1\Project1\SysInfo.pb.cc;C:\Users\ok\source\repos\Project1\Project1\x64\Release\SysInfo.pb.obj
+C:\Users\User\source\repos\Grpc_System_Info\Project1\FileName.cpp;C:\Users\User\source\repos\Grpc_System_Info\Project1\x64\Release\FileName.obj
+C:\Users\User\source\repos\Grpc_System_Info\Project1\getsysinfo.cpp;C:\Users\User\source\repos\Grpc_System_Info\Project1\x64\Release\getsysinfo.obj
+C:\Users\User\source\repos\Grpc_System_Info\Project1\Logger.cpp;C:\Users\User\source\repos\Grpc_System_Info\Project1\x64\Release\Logger.obj
+C:\Users\User\source\repos\Grpc_System_Info\Project1\sysinfo.cpp;C:\Users\User\source\repos\Grpc_System_Info\Project1\x64\Release\sysinfo.obj
+C:\Users\User\source\repos\Grpc_System_Info\Project1\SysInfo.grpc.pb.cc;C:\Users\User\source\repos\Grpc_System_Info\Project1\x64\Release\SysInfo.grpc.pb.obj
+C:\Users\User\source\repos\Grpc_System_Info\Project1\SysInfo.pb.cc;C:\Users\User\source\repos\Grpc_System_Info\Project1\x64\Release\SysInfo.pb.obj

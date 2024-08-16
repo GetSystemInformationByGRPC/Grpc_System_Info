@@ -1,0 +1,14 @@
+[2024-08-15 00:40:15.829] [file_logger] [debug] Server listening on 0.0.0.0:50051
+[2024-08-15 00:40:25.072] [file_logger] [debug] **************************************Request for CPU Information**************************************
+[2024-08-15 00:40:25.073] [file_logger] [debug] Received request from: ipv4:127.0.0.1:12488
+[2024-08-15 01:02:30.936] [file_logger] [debug] 	***********************************************************
+[2024-08-15 01:02:30.941] [file_logger] [debug] 	***************WELCOME TO CONSOLE APP *********************
+[2024-08-15 01:02:30.941] [file_logger] [debug] 	Please enter your command:
+	1) Enter 1 for RAM informatio.
+	2) Enter 2 for CPU Utilization
+	3) Enter 3 for DISK information
+	4) Enter 4 for Network Adapters
+	5) Enter 5 for OS type
+	0) Enter 0 for exit:
+[2024-08-15 01:02:30.942] [file_logger] [debug] 
+	 Please Enter Your Command:
