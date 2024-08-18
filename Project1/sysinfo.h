@@ -12,6 +12,13 @@
 #include <tchar.h>
 #include <Wbemidl.h>
 #include <comutil.h>
+#include <grpcpp/grpcpp.h>
+#include <grpc/grpc_security.h>
+#include <thread>
+#include <grpc++/grpc++.h>
+#include <fstream>
+
+
 #pragma comment(lib, "wbemuuid.lib")
 #pragma comment(lib, "Iphlpapi.lib")
 

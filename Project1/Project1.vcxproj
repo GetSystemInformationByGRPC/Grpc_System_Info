@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FileName.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="getsysinfo.cpp" />
     <ClCompile Include="sysinfo.cpp" />
     <ClCompile Include="SysInfo.grpc.pb.cc" />
