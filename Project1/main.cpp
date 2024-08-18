@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <clipp.h>
 #include <Windows.h>
 #include <tchar.h>
 #include <grpcpp/grpcpp.h>
@@ -42,14 +43,16 @@ void InstallService()
     SC_HANDLE schSCManager = OpenSCManager(NULL, NULL, SC_MANAGER_CREATE_SERVICE);
     if (schSCManager == NULL)
     {
-        std::wcout << L"OpenSCManager failed, error: " << GetLastError() << std::endl;
+        std::string error = "OpenSCManager failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
         return;
     }
 
     wchar_t path[MAX_PATH];
     if (!GetModuleFileName(NULL, path, MAX_PATH))
-    {
-        std::wcout << L"GetModuleFileName failed, error: " << GetLastError() << std::endl;
+    {   
+        std::string error = "GetModuleFileName failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
         CloseServiceHandle(schSCManager);
         return;
     }
@@ -62,12 +65,12 @@ void InstallService()
 
     if (schService == NULL)
     {
-        std::wcout << L"CreateService failed, error: " << GetLastError() << std::endl;
+        std::string error = "CreateService failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
         CloseServiceHandle(schSCManager);
         return;
     }
-
-    std::wcout << L"Service installed successfully" << std::endl;
+    Logger::debug("Service installed successfully");
 
     CloseServiceHandle(schService);
     CloseServiceHandle(schSCManager);
@@ -77,15 +80,17 @@ void UninstallService()
 {
     SC_HANDLE schSCManager = OpenSCManager(NULL, NULL, SC_MANAGER_CONNECT);
     if (schSCManager == NULL)
-    {
-        std::wcout << L"OpenSCManager failed, error: " << GetLastError() << std::endl;
+    {   
+        std::string error = "OpenSCManager failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
         return;
     }
 
     SC_HANDLE schService = OpenService(schSCManager, SERVICE_NAME, SERVICE_STOP | DELETE);
     if (schService == NULL)
     {
-        std::wcout << L"OpenService failed, error: " << GetLastError() << std::endl;
+        std::string error = "OpenService failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
         CloseServiceHandle(schSCManager);
         return;
     }
@@ -94,17 +99,18 @@ void UninstallService()
     SERVICE_STATUS ss;
     if (ControlService(schService, SERVICE_CONTROL_STOP, &ss))
     {
-        std::wcout << L"Stopping service..." << std::endl;
+        Logger::debug("Stopping service...");
         Sleep(1000);
     }
 
     if (DeleteService(schService))
     {
-        std::wcout << L"Service uninstalled successfully" << std::endl;
+        Logger::debug("Service uninstalled successfully");
     }
     else
     {
-        std::wcout << L"DeleteService failed, error: " << GetLastError() << std::endl;
+        std::string error = "DeleteService failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
     }
 
     CloseServiceHandle(schService);
@@ -116,25 +122,29 @@ void StartService()
     SC_HANDLE schSCManager = OpenSCManager(NULL, NULL, SC_MANAGER_CONNECT);
     if (schSCManager == NULL)
     {
-        std::wcout << L"OpenSCManager failed, error: " << GetLastError() << std::endl;
+        std::string error = "OpenSCManager failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
+        
         return;
     }
 
     SC_HANDLE schService = OpenService(schSCManager, SERVICE_NAME, SERVICE_START);
     if (schService == NULL)
     {
-        std::wcout << L"OpenService failed, error: " << GetLastError() << std::endl;
+        std::string error = "OpenService failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
         CloseServiceHandle(schSCManager);
         return;
     }
 
     if (StartService(schService, 0, NULL))
     {
-        std::wcout << L"Service started successfully" << std::endl;
+        Logger::debug("Service started successfully");
     }
     else
     {
-        std::wcout << L"StartService failed, error: " << GetLastError() << std::endl;
+        std::string error = "StartService failed, error: " + sysinfo::convertToString(GetLastError());
+        Logger::error(error);
     }
 
     CloseServiceHandle(schService);
@@ -153,8 +163,9 @@ private:
 public:
     Status GetRAMinfo(ServerContext* context, const Empty* request,
         RAMResponse* reply) override {
+        Logger::debug("**************************************Request for Ram Information**************************************");
         std::string peer = context->peer();
-        std::cout << "Received request from: " << peer << std::endl;
+        Logger::debug("Received request from: " + peer);
         struct RAM ram;
         systeminformation.getRAMinfo(ram);
         reply->set_total_ram(ram.Total_RAM);
@@ -164,12 +175,21 @@ public:
     }
     Status GetCPUutilization(ServerContext* context, const Empty* request,
         CPUResponse* reply) override {
+        Logger::debug("**************************************Request for CPU Information**************************************");
+        std::string peer = context->peer();
+        Logger::debug("Received request from: " + peer);
+
         reply->set_avg_cpu_utilization(cpuut.PrintAverageCpuUsage());
         return Status::OK;
     }
     Status GetDiskUsage(ServerContext* context, const Empty* request,
         DiskResponse* reply) override {
         std::vector<std::wstring> paths;
+
+        Logger::debug("**************************************Request for Disk Information**************************************");
+        std::string peer = context->peer();
+        Logger::debug("Received request from: " + peer);
+
         systeminformation.ListDrives(paths);
 
         for (auto path : paths)
@@ -189,6 +209,12 @@ public:
 
     Status GetOsType(ServerContext* context, const Empty* request,
         OsResponse* reply) override {
+
+        Logger::debug("**************************************Request for OS Information**************************************");
+        std::string peer = context->peer();
+        Logger::debug("Received request from: " + peer);
+
+
         bool type = systeminformation.IsRunningInVirtualMachine();
         if (type) {
             reply->set_is_virtual_machine("true");
@@ -202,6 +228,11 @@ public:
 
     Status GetNetworkAdapters(ServerContext* context, const Empty* request,
         NetworkResponse* reply) override {
+
+        Logger::debug("**************************************Request for Network Adaptor Information**************************************");
+        std::string peer = context->peer();
+        Logger::debug("Received request from: " + peer);
+
         std::vector<struct Network> networks;
         systeminformation.printNetworkAdapterFriendlyNames(networks);
         for (Network network : networks)
@@ -267,7 +298,10 @@ Server_grpc seGrpc;
 
 /****************************************Console APP*********************************************/
 void Console_App()
-{
+{   
+
+    Logger::debug("System is running in console...");
+
     sysinfo systeminformation;
     sysinfo::CpuUtilization cpuu;
     int command = 1;
@@ -512,29 +546,65 @@ DWORD WINAPI ServiceWorkerThread(LPVOID lpParam)
 
 int _tmain(int argc, TCHAR* argv[])
 {
-    if (argc > 1)
-    {
-        if (_tcscmp(argv[1], _T("-i")) == 0)
-        {
-            InstallService();
-            StartService();
-            return 0;
-        }
-        else if (_tcscmp(argv[1], _T("-u")) == 0)
-        {
-            UninstallService();
-            return 0;
-        }
-        else if (_tcscmp(argv[1], _T("-c")) == 0)
-        {
-            Console_App();
-        }
-        else if (_tcscmp(argv[1], _T("-s")) == 0)
-        {
-            seGrpc.run();
-
-        }
+    std::vector<std::string> args;
+    for (int i = 0; i < argc; ++i) {
+        std::wstring ws(argv[i]);
+        std::string str(ws.begin(), ws.end());
+        args.push_back(str);
     }
+
+    std::vector<const char*> cargs;
+    for (const auto& arg : args) {
+        cargs.push_back(arg.c_str());
+    }
+
+    bool install = false;
+    bool uninstall = false;
+    bool console = false;
+    bool service = false;
+    bool help = false;
+
+    auto cli = (
+        clipp::option("-i", "--install").set(install).doc("Install and start the service"),
+        clipp::option("-u", "--uninstall").set(uninstall).doc("Uninstall the service"),
+        clipp::option("-c", "--console").set(console).doc("Run the application in console mode"),
+        clipp::option("-s", "--service").set(service).doc("Run the gRPC server"),
+        clipp::option("-h", "--help").set(help).doc("Display this help message")
+
+        );
+
+    if (!clipp::parse(static_cast<int>(cargs.size()), const_cast<char**>(cargs.data()), cli)) {
+        std::cout << "Usage:\n" << clipp::usage_lines(cli, "ServiceApp") << "\n";
+        return 0;
+    }
+
+    if (install) {
+        InstallService();
+        StartService();
+        return 0;
+    }
+
+    if (uninstall) {
+        UninstallService();
+        return 0;
+    }
+
+    if (console) {
+        Console_App();
+        return 0;
+    }
+
+    if (service) {
+        seGrpc.run();
+        return 0;
+    }
+    if (help) {
+        std::cout << "Usage:\n\n" << clipp::usage_lines(cli, "ServiceApp") << "\n\n\n\n";
+        std::cout << "Detailed Documentation:\n\n" << clipp::documentation(cli) << "\n\n";
+
+        return 0;
+    }
+
     wchar_t sn[] = L"System Info Service";
     SERVICE_TABLE_ENTRY ServiceTable[] =
     {

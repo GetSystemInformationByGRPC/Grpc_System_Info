@@ -17,7 +17,7 @@
 #include <thread>
 #include <grpc++/grpc++.h>
 #include <fstream>
-
+#include "Logger.h"
 
 #pragma comment(lib, "wbemuuid.lib")
 #pragma comment(lib, "Iphlpapi.lib")
@@ -59,6 +59,7 @@ public:
     std::string GetAdapterFriendlyName(PIP_ADAPTER_INFO pAdapterInfo);
     void printNetworkAdapterFriendlyNames(std::vector<struct Network>& networks);
     std::string WstringToString(const std::wstring& wstr);
+    static std::string convertToString(DWORD error_code);
     uint64_t ByteToGb(uint64_t size_in_byte);
 	bool IsRunningInVirtualMachine();
     class CpuUtilization {

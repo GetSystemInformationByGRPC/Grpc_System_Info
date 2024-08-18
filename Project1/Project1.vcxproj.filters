@@ -33,6 +33,9 @@
     <ClCompile Include="SysInfo.pb.cc">
       <Filter>Resource Files\Source Files\gRPC</Filter>
     </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SysInfo.proto" />
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="SysInfo.pb.h">
       <Filter>Resource Files\Source Files\gRPC</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,12 @@
 #include "sysinfo.h"
 
+
+std::string sysinfo::convertToString(DWORD error_code) {
+    std::ostringstream oss;
+    oss << "OpenSCManager failed, error: " << error_code;
+    return oss.str();
+}
+
 uint64_t sysinfo::ByteToGb(uint64_t size_in_byte)
 {
     return size_in_byte / (1024 * 1024 * 1024);
@@ -231,7 +238,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
             ULONG ulSize = 0;
             pIfTable = (MIB_IFTABLE*)malloc(sizeof(MIB_IFTABLE));
             if (pIfTable == NULL) {
-                std::cerr << "Error allocating memory for GetIfTable\n";
+                Logger::error("Error allocating memory for GetIfTable");
                 free(pAdapterInfo);
                 return;
             }
@@ -241,7 +248,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
                 free(pIfTable);
                 pIfTable = (MIB_IFTABLE*)malloc(ulSize);
                 if (pIfTable == NULL) {
-                    std::cerr << "Error allocating memory for GetIfTable\n";
+                    Logger::error("Error allocating memory for GetIfTable");
                     free(pAdapterInfo);
                     return;
                 }
