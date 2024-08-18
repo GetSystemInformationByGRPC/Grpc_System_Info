@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <tchar.h>
 #include <grpcpp/grpcpp.h>
+#include <grpc/grpc_security.h>
 #include <string>
 #include <strsafe.h>
 #include <iostream>
@@ -9,7 +10,7 @@
 #include <grpc++/grpc++.h>
 #include "SysInfo.grpc.pb.h"
 #include "sysinfo.h"
-
+#include <fstream>
 
 
 using grpc::Channel;
@@ -203,7 +204,7 @@ public:
         NetworkResponse* reply) override {
         std::vector<struct Network> networks;
         systeminformation.printNetworkAdapterFriendlyNames(networks);
-        for (auto network : networks)
+        for (Network network : networks)
         {
             NetworkAdapterInfo* networkInfo = reply->add_networks_adapter();
             networkInfo->set_friendly_name(network.Friendly_Name);
@@ -212,6 +213,10 @@ public:
             networkInfo->set_ip_mask(network.Ip_Mask);
             networkInfo->set_gateway(network.Gateway);
             networkInfo->set_dhcp_server(network.Dhcp_Server);
+            networkInfo->set_send_bytes(network.Send_Bytes);
+            networkInfo->set_received_bytes(network.Receive_Bytes);
+            networkInfo->set_bandwidth(network.Bandwidth);
+           
         }
         return Status::OK;
     }
@@ -220,13 +225,32 @@ public:
 };
 class Server_grpc {
 public:
+    std::string LoadFile(const std::string& file_path) {
+        std::ifstream file(file_path);
+        std::stringstream buffer;
+        buffer << file.rdbuf();
+        return buffer.str();
+    }
     void run() {
         std::string server_address("0.0.0.0:50051");
         SysInfoServiceImpl service;
 
-        ServerBuilder builder;
-        builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+        //std::string server_cert = LoadFile("server.crt");
+        //std::string server_key = LoadFile("server.key");
+        //std::string root_cert = LoadFile("ca.crt");
+
+        grpc::SslServerCredentialsOptions::PemKeyCertPair key_cert_pair = {
+            LoadFile("server.key"),
+            LoadFile("server.crt")
+        };
+        grpc::SslServerCredentialsOptions ssl_opts;
+        ssl_opts.pem_key_cert_pairs.push_back(key_cert_pair);
+        ssl_opts.pem_root_certs = LoadFile("ca.crt");
+        
+        grpc::ServerBuilder builder;
+        builder.AddListeningPort(server_address, grpc::SslServerCredentials(ssl_opts));
         builder.RegisterService(&service);
+        //builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
         server = builder.BuildAndStart();
         std::cout << "Server listening on " << server_address << std::endl;
 
@@ -268,7 +292,8 @@ void Console_App()
         }
         else if (command == 2)
         {
-            cpuu.PrintAverageCpuUsage();
+            std::cout << "Average CPU Usage: " << cpuu.PrintAverageCpuUsage() << "%" << std::endl;
+         
 
         }
         else if (command == 3)
@@ -279,16 +304,39 @@ void Console_App()
             {
                 Disk disk;
                 systeminformation.getDiskUsage(path, disk);
+                std::cout << "\n\t Path of Drive : " << disk.Path << endl;
+                std::cout << "\n\t Total Size in GB : " << systeminformation.ByteToGb(disk.Total_Size) << endl;
+                std::cout << "\n\t Used Size in GB : " << systeminformation.ByteToGb(disk.Used_Space) << endl;
+                std::cout << "\n\t Free Size in GB : " << systeminformation.ByteToGb(disk.Total_Size) - systeminformation.ByteToGb(disk.Used_Space) << endl;
+
+
             }
         }
         else if (command == 4)
         {
-            std::vector<Network> network;
-            systeminformation.printNetworkAdapterFriendlyNames(network);
+            std::vector<Network> networks;
+            systeminformation.printNetworkAdapterFriendlyNames(networks);
+            for (Network network : networks)
+            {
+                std::cout << "\n\t Adapter Name : " << network.Friendly_Name << endl;
+                std::cout << "\n\t Adapter Descrition : " << network.Adapter_Desc << endl;
+                std::cout << "\n\t Ip Address : " << network.Ip_Address << endl;
+                std::cout << "\n\t Ip Mask : " << network.Gateway << endl;
+                std::cout << "\n\t Dhcp Server : " << network.Dhcp_Server << endl;
+                std::cout << "\n\t Send Byte : " << network.Send_Bytes << endl;
+                std::cout << "\n\t Received Byte : " << network.Receive_Bytes << endl;
+                std::cout << "\n\t Bandwidth : " << network.Bandwidth << endl;
+            }
         }
         else if (command == 5)
         {
-            systeminformation.IsRunningInVirtualMachine();
+            if (systeminformation.IsRunningInVirtualMachine()) {
+                std::cout << "\n\t The system is running in a virtual machine." << std::endl;
+            }
+            else {
+                std::cout << "\n\t The system is running on physical hardware." << std::endl;
+            }
+            
             
         }
         else if (command == 0)

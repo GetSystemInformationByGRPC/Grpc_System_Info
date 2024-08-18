@@ -30,6 +30,9 @@ message NetworkAdapterInfo{
 	string Ip_Mask = 4;
 	string Gateway = 5;
 	string Dhcp_Server = 6;
+	int64 Send_Bytes = 7;
+	int64 Received_Bytes = 8;
+	int64 Bandwidth = 9;
 
 }
 

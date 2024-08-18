@@ -10,7 +10,9 @@
 #include <string>
 #include <codecvt>
 #include <tchar.h>
-
+#include <Wbemidl.h>
+#include <comutil.h>
+#pragma comment(lib, "wbemuuid.lib")
 #pragma comment(lib, "Iphlpapi.lib")
 
 struct RAM {
@@ -33,7 +35,11 @@ struct Network {
     std::string Ip_Mask;
     std::string Gateway;
     std::string Dhcp_Server;
+    uint64_t Send_Bytes;
+    uint64_t Receive_Bytes;
+    uint64_t Bandwidth;
 };
+
 
 
 class sysinfo
@@ -85,7 +91,7 @@ public:
             }
 
             double averageCpuUsage = totalCpuUsage / numCores;
-            std::cout << "Average CPU Usage: " << averageCpuUsage << "%" << std::endl;
+            //std::cout << "Average CPU Usage: " << averageCpuUsage << "%" << std::endl;
             return averageCpuUsage;
         }
 

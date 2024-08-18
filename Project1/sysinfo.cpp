@@ -138,6 +138,7 @@ bool sysinfo::IsRunningInVirtualMachine() {
     return isVirtualMachine;
 
 }
+
 std::string sysinfo::GetAdapterFriendlyName(PIP_ADAPTER_INFO pAdapterInfo)
 {
     HKEY hKey;
@@ -198,7 +199,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
             return;
         }
     }
-
+    
     // Get the actual data
     if (GetAdaptersInfo(pAdapterInfo, &ulOutBufLen) == NO_ERROR) {
         pAdapter = pAdapterInfo;
@@ -225,6 +226,39 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
                 network.Dhcp_Server = "Dhcp servet disabled";
             }
             //printf("\n");
+            MIB_IFTABLE* pIfTable;
+            MIB_IFROW* pIfRow;
+            ULONG ulSize = 0;
+            pIfTable = (MIB_IFTABLE*)malloc(sizeof(MIB_IFTABLE));
+            if (pIfTable == NULL) {
+                std::cerr << "Error allocating memory for GetIfTable\n";
+                free(pAdapterInfo);
+                return;
+            }
+            ulSize = sizeof(MIB_IFTABLE);
+
+            if (GetIfTable(pIfTable, &ulSize, FALSE) == ERROR_INSUFFICIENT_BUFFER) {
+                free(pIfTable);
+                pIfTable = (MIB_IFTABLE*)malloc(ulSize);
+                if (pIfTable == NULL) {
+                    std::cerr << "Error allocating memory for GetIfTable\n";
+                    free(pAdapterInfo);
+                    return;
+                }
+            }
+
+            if (GetIfTable(pIfTable, &ulSize, FALSE) == NO_ERROR) {
+                for (int i = 0; i < (int)pIfTable->dwNumEntries; i++) {
+                    pIfRow = (MIB_IFROW*)&pIfTable->table[i];
+                    if (pIfRow->dwIndex == pAdapter->Index) {
+                        network.Send_Bytes = pIfRow->dwOutOctets;
+                        network.Receive_Bytes = pIfRow->dwInOctets;
+                        network.Bandwidth = pIfRow->dwSpeed;
+                        break;
+                    }
+                }
+            }
+            free(pIfTable);
 
             networks.push_back(network);
             pAdapter = pAdapter->Next;

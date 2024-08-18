@@ -165,10 +165,7 @@ C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1550,75):
 C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\type.pb.h(1551,72): warning C4251: 'google::protobuf::Enum::Impl_::options_': 'google::protobuf::RepeatedPtrField<google::protobuf::Option>' needs to have dll-interface to be used by clients of 'google::protobuf::Enum::Impl_'
 C:\vcpkg\vcpkg\installed\x64-windows\include\grpcpp\support\proto_buffer_reader.h(155,16): warning C4244: '-=': conversion from 'int64_t' to 'int', possible loss of data
 C:\vcpkg\vcpkg\installed\x64-windows\include\grpcpp\support\proto_buffer_reader.h(168,18): warning C4244: '-=': conversion from 'uint64_t' to 'int', possible loss of data
-C:\Users\ok\source\repos\Project1\Project1\FileName.cpp(166,66): warning C4244: 'argument': conversion from 'double' to 'int64_t', possible loss of data
-  getsysinfo.cpp
-  sysinfo.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\xutility(4672,18): warning C4244: '=': conversion from 'wchar_t' to 'char', possible loss of data
+C:\Users\ok\source\repos\Project1\Project1\FileName.cpp(167,66): warning C4244: 'argument': conversion from 'double' to 'int64_t', possible loss of data
   SysInfo.grpc.pb.cc
 C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\io\coded_stream.h(1262,28): warning C4251: 'google::protobuf::io::CodedOutputStream::default_serialization_deterministic_': 'std::atomic<bool>' needs to have dll-interface to be used by clients of 'google::protobuf::io::CodedOutputStream'
 C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\serial_arena.h(371,22): warning C4251: 'google::protobuf::internal::SerialArena::ptr_': 'std::atomic<char *>' needs to have dll-interface to be used by clients of 'google::protobuf::internal::SerialArena'
@@ -375,7 +372,6 @@ C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\map.h(773,13): warn
 C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\map.h(689,19): warning C4244: 'initializing': conversion from 'uintptr_t' to 'google::protobuf::internal::map_index_t', possible loss of data
 C:\vcpkg\vcpkg\installed\x64-windows\include\google\protobuf\message.h(1027,27): warning C4251: 'google::protobuf::Reflection::tcparse_table_once_': 'absl::lts_20240722::once_flag' needs to have dll-interface to be used by clients of 'google::protobuf::Reflection'
   Generating Code...
-C:\Users\ok\source\repos\Project1\Project1\getsysinfo.cpp(336,1): warning C4715: 'GetAdapterFriendlyName': not all control paths return a value
 FileName.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
   LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
   Project1.vcxproj -> C:\Users\ok\source\repos\Project1\x64\Release\Project1.exe
