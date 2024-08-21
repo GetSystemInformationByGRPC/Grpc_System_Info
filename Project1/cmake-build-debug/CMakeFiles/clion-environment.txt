@@ -1,0 +1,4 @@
+ToolSet: 1.0 (local)Ninja: 1.12.0@/home/mohammadmahdi/Downloads/JetBrains_CLion_2024.1.4_Linux64_Downloadly.ir/JetBrains CLion 2024.1.4 Linux64/CLion-2024.1.4_Downloadly.ir/clion-2024.1.4/bin/ninja/linux/x64/ninja
+Options: 
+
+Options:-DCMAKE_MAKE_PROGRAM=/home/mohammadmahdi/Downloads/JetBrains_CLion_2024.1.4_Linux64_Downloadly.ir/JetBrains CLion 2024.1.4 Linux64/CLion-2024.1.4_Downloadly.ir/clion-2024.1.4/bin/ninja/linux/x64/ninja
