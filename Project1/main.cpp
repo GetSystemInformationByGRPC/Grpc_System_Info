@@ -1,18 +1,23 @@
 ﻿#include <iostream>
-#include <clipp.h>
-#include <Windows.h>
-#include <tchar.h>
 #include <grpcpp/grpcpp.h>
 #include <grpc/grpc_security.h>
 #include <string>
-#include <strsafe.h>
 #include <iostream>
 #include <thread>
 #include <grpc++/grpc++.h>
 #include "SysInfo.grpc.pb.h"
 #include "sysinfo.h"
 #include <fstream>
+#ifdef _WIN32
+#include <strsafe.h>
+#include <clipp.h>
+#include <Windows.h>
+#include <tchar.h>
+#endif
 
+#ifdef __linux__
+#include "clipp.h"
+#endif
 
 using grpc::Channel;
 using grpc::ClientContext;
@@ -22,6 +27,7 @@ using grpc::ServerBuilder;
 using grpc::ServerContext;
 using namespace std;
 
+#ifdef _WIN32
 SERVICE_STATUS        g_ServiceStatus = { 0 };
 SERVICE_STATUS_HANDLE g_StatusHandle = NULL;
 HANDLE                g_ServiceStopEvent = INVALID_HANDLE_VALUE;
@@ -35,7 +41,7 @@ DWORD WINAPI ServiceWorkerThread(LPVOID lpParam);
 void InstallService();
 void UninstallService();
 void StartService();
-void Console_App();
+
 
 
 void InstallService()
@@ -152,7 +158,7 @@ void StartService()
 }
 
 
-
+#endif
 
 /**************************************GRPC SERVIC***************************************/
 
@@ -189,7 +195,7 @@ public:
         Logger::debug("**************************************Request for Disk Information**************************************");
         std::string peer = context->peer();
         Logger::debug("Received request from: " + peer);
-
+#ifdef _WIN32
         systeminformation.ListDrives(paths);
 
         for (auto path : paths)
@@ -203,7 +209,16 @@ public:
     
 
         }
+#elif __linux__
+        struct Disk disk;
+        systeminformation.getDiskUsage(L"", disk);
+        DiskInfo* driveInfo = reply->add_drives();
+        driveInfo->set_total_size(disk.Total_Size);
+        driveInfo->set_path(disk.Path);
+        driveInfo->set_used_space(disk.Used_Space);
+#endif
         return  Status::OK;
+
 
     }
 
@@ -266,7 +281,7 @@ public:
         std::string server_address("0.0.0.0:50051");
         SysInfoServiceImpl service;
 
-
+        /*
         grpc::SslServerCredentialsOptions::PemKeyCertPair key_cert_pair = {
             LoadFile("server.key"),
             LoadFile("server.crt")
@@ -274,9 +289,9 @@ public:
         grpc::SslServerCredentialsOptions ssl_opts;
         ssl_opts.pem_key_cert_pairs.push_back(key_cert_pair);
         ssl_opts.pem_root_certs = LoadFile("ca.crt");
-        
+        */
         grpc::ServerBuilder builder;
-        builder.AddListeningPort(server_address, grpc::SslServerCredentials(ssl_opts));
+        builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
         builder.RegisterService(&service);
         //builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
         server = builder.BuildAndStart();
@@ -328,8 +343,11 @@ void Console_App()
         }
         else if (command == 3)
         {
+#ifdef _WIN32
             std::vector<std::wstring> paths;
+
             systeminformation.ListDrives(paths);
+
             for (auto path : paths)
             {
                 Disk disk;
@@ -341,6 +359,15 @@ void Console_App()
                 std::cout << "\t********************************************\t" << endl;
 
             }
+#elif __linux__
+            Disk disk;
+            systeminformation.getDiskUsage(L"",disk);
+            std::cout << "\n\t Path of Drive : " << disk.Path << endl;
+            std::cout << "\n\t Total Size in GB : " << systeminformation.ByteToGb(disk.Total_Size) << endl;
+            std::cout << "\n\t Used Size in GB : " << systeminformation.ByteToGb(disk.Used_Space) << endl;
+            std::cout << "\n\t Free Size in GB : " << systeminformation.ByteToGb(disk.Total_Size) - systeminformation.ByteToGb(disk.Used_Space) << endl;
+            std::cout << "\t********************************************\t" << endl;
+#endif
         }
         else if (command == 4)
         {
@@ -388,7 +415,7 @@ void Console_App()
 
 
 
-
+#ifdef _WIN32
 
 
 VOID WINAPI ServiceMain(DWORD argc, LPTSTR* argv)
@@ -619,3 +646,87 @@ int _tmain(int argc, TCHAR* argv[])
 
     return 0;
 }
+#elif __linux__
+void installService(const std::string &serviceName, const std::string &servicePath) {
+
+    std::string serviceFilePath = "/etc/systemd/system/" + serviceName + ".service";
+
+    std::string serviceFileContent =
+        "[Unit]\n"
+        "Description=My C++ Daemon Service\n"
+        "After=network.target\n\n"
+        "[Service]\n"
+        "ExecStart=" + servicePath + "\n"
+        "Restart=always\n"
+        "RestartSec=5\n\n"
+        "[Install]\n"
+        "WantedBy=multi-user.target\n";
+
+    std::ofstream serviceFile(serviceFilePath);
+    if (!serviceFile.is_open()) {
+        std::cerr << "Error: Could not create service file." << std::endl;
+        exit(1);
+    }
+    serviceFile << serviceFileContent;
+    serviceFile.close();
+
+    std::system("systemctl daemon-reload");
+    std::system(("systemctl enable " + serviceName).c_str());
+    std::system(("systemctl start " + serviceName).c_str());
+
+    std::cout << "Service installed and started successfully!" << std::endl;
+}
+
+void uninstallService(const std::string &serviceName) {
+    std::system(("systemctl stop " + serviceName).c_str());
+
+    std::system(("systemctl disable " + serviceName).c_str());
+
+    std::string serviceFilePath = "/etc/systemd/system/" + serviceName + ".service";
+    if (remove(serviceFilePath.c_str()) != 0) {
+        std::cerr << "Error: Could not delete service file." << std::endl;
+    } else {
+        std::cout << "Service file deleted successfully!" << std::endl;
+    }
+
+    std::system("systemctl daemon-reload");
+
+    std::cout << "Service uninstalled successfully!" << std::endl;
+}
+
+
+int main(int argc, char* argv[]) {
+
+    if (argc > 1 && std::string(argv[1]) == "-i") {
+
+        char result[1024];
+        ssize_t count = readlink("/proc/self/exe", result, sizeof(result) - 1);
+        if (count != -1) {
+            result[count] = '\0';
+            std::string binaryPath(result);
+
+            installService("Sys_Info_Service", binaryPath);
+        } else {
+            std::cerr << "Error: Could not determine binary path." << std::endl;
+            return 1;
+        }
+    } else if (argc > 1 && std::string(argv[1]) == "-u") {
+        uninstallService("Sys_Info_Service");
+    } else if (argc > 1 && std::string(argv[1]) == "-s") {
+        seGrpc.run();
+    }
+    else if (argc > 1 && std::string(argv[1]) == "-c") {
+        Console_App();
+    }
+    else {
+
+        while (true) {
+            //std::cout << "Running as a service..." << std::endl;
+            seGrpc.run();
+            sleep(1);
+        }
+    }
+
+    return 0;
+}
+#endif
