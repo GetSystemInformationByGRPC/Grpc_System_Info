@@ -115,7 +115,7 @@ void sysinfo::getRAMinfo(struct RAM &ram)
 #ifdef _WIN32
     MEMORYSTATUSEX statex;
     statex.dwLength = sizeof(statex);
-    
+
     if (GlobalMemoryStatusEx(&statex)) {
         uint64_t Total_RAM = statex.ullTotalPhys;
         uint64_t Used_RAM = (statex.ullTotalPhys - statex.ullAvailPhys);
@@ -167,7 +167,7 @@ void sysinfo::getRAMinfo(struct RAM &ram)
 }
 
 
-void sysinfo::getDiskUsage(const std::wstring& path=NULL, struct Disk& disk) {
+void sysinfo::getDiskUsage(const std::wstring& path, struct Disk& disk) {
 #ifdef _WIN32
     ULARGE_INTEGER freeBytesAvailable;
     ULARGE_INTEGER totalNumberOfBytes;
@@ -315,7 +315,7 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
             return;
         }
     }
-    
+
     // Get the actual data
     if (GetAdaptersInfo(pAdapterInfo, &ulOutBufLen) == NO_ERROR) {
         pAdapter = pAdapterInfo;
@@ -434,4 +434,3 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
     freeifaddrs(ifaddr);
 #endif
 }
-

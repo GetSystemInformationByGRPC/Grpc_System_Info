@@ -6,6 +6,7 @@
 #include <thread>
 #include <grpc++/grpc++.h>
 #include "SysInfo.grpc.pb.h"
+#include "SysInfo.pb.h"
 #include "sysinfo.h"
 #include <fstream>
 #ifdef _WIN32
