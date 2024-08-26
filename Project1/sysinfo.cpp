@@ -419,14 +419,19 @@ void sysinfo::printNetworkAdapterFriendlyNames(std::vector<struct Network>& netw
         network.Receive_Bytes = readSysfsValue(sysfs_path + "rx_bytes");
 
         // Get bandwidth (speed)
+        uint64_t bandone,bandtwo;
+        bandone = readSysfsValue(sysfs_path + "tx_bytes");
         std::ifstream speed_file("/sys/class/net/" + network.Friendly_Name + "/speed");
-        if (speed_file.is_open()) {
-            speed_file >> network.Bandwidth;
+        //if (speed_file.is_open()) {
+            //speed_file >> network.Bandwidth;
             //network.Bandwidth *= 1000000; // Convert from Mbps to bps
             //network.Bandwidth /= 8; //convert from bps to Bps
-        } else {
-            network.Bandwidth = 0;
-        }
+        //} else {
+        //   network.Bandwidth = 0;
+        //}
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        bandtwo = readSysfsValue(sysfs_path + "tx_bytes");
+        network.Bandwidth = (bandtwo - bandone) / 5;
 
         networks.push_back(network);
     }

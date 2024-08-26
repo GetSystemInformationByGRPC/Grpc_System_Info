@@ -698,6 +698,36 @@ void uninstallService(const std::string &serviceName) {
 
 int main(int argc, char* argv[]) {
 
+    std::vector<std::string> args;
+    for (int i = 0; i < argc; ++i) {
+        //std::wstring ws(argv[i]);
+        std::string str(argv[i]);
+        args.push_back(str);
+    }
+
+    std::vector<const char*> cargs;
+    for (const auto& arg : args) {
+        cargs.push_back(arg.c_str());
+    }
+
+    bool install = false;
+    bool uninstall = false;
+    bool console = false;
+    bool service = false;
+    bool help = false;
+
+    auto cli = (
+        clipp::option("-i", "--install").set(install).doc("Install and start the service"),
+        clipp::option("-u", "--uninstall").set(uninstall).doc("Uninstall the service"),
+        clipp::option("-c", "--console").set(console).doc("Run the application in console mode"),
+        clipp::option("-s", "--service").set(service).doc("Run the gRPC server"),
+        clipp::option("-h", "--help").set(help).doc("Display this help message")
+
+        );
+    if (!clipp::parse(static_cast<int>(cargs.size()), const_cast<char**>(cargs.data()), cli)) {
+        std::cout << "Usage:\n" << clipp::usage_lines(cli, "ServiceApp") << "\n";
+        return 0;
+    }
     if (argc > 1 && std::string(argv[1]) == "-i") {
 
         char result[1024];
@@ -719,12 +749,18 @@ int main(int argc, char* argv[]) {
     else if (argc > 1 && std::string(argv[1]) == "-c") {
         Console_App();
     }
+    else if (argc > 1 && std::string(argv[1]) == "-h") {
+        std::cout << "Usage:\n\n" << clipp::usage_lines(cli, "ServiceApp") << "\n\n\n\n";
+        std::cout << "Detailed Documentation:\n\n" << clipp::documentation(cli) << "\n\n";
+
+        return 0;
+    }
     else {
 
         while (true) {
             //std::cout << "Running as a service..." << std::endl;
             seGrpc.run();
-            sleep(1);
+            //sleep(1);
         }
     }
 

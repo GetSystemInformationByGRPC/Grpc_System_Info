@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\fmt\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\;CMake Files\..\..\..\.local\;CMake Files\..\..\..\.local\lib\;CMake Files\..\..\..\.local\lib\cmake\;CMake Files\..\..\..\.local\lib\cmake\grpc\;CMake Files\..\..\..\.local\lib\cmake\absl\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project1">
+				<Option output="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Project1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-DFMT_SHARED"/>
+					<Add option="-DSPDLOG_SHARED_LIB"/>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DSPDLOG_FMT_EXTERNAL"/>
+					<Add directory="/home/mohammadmahdi/.local/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project1"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project1/fast">
+				<Option output="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Project1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-DFMT_SHARED"/>
+					<Add option="-DSPDLOG_SHARED_LIB"/>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DSPDLOG_FMT_EXTERNAL"/>
+					<Add directory="/home/mohammadmahdi/.local/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project1/fast"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j2 -f &quot;/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/Logger.cpp">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/Logger.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/SysInfo.grpc.pb.cc">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/SysInfo.grpc.pb.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/SysInfo.pb.cc">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/SysInfo.pb.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/main.cpp">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/sysinfo.cpp">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/sysinfo.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/usr/local/lib/libprotobuf.so">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/fmt/fmt-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/fmt/fmt-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/fmt/fmt-targets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/fmt/fmt-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/grpc/gRPCConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/grpc/gRPCConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/grpc/gRPCPluginTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/grpc/gRPCPluginTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/grpc/gRPCTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/grpc/gRPCTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/absl/abslConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/absl/abslConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/absl/abslTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/../../../.local/lib/cmake/absl/abslTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\.local\lib\cmake\absl\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

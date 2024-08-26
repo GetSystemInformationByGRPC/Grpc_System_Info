@@ -3,7 +3,8 @@ project(Project1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(PROTO_FILES "/home/mohammad/Desktop/Grpc_System_Info/Project1/SysInfo.proto")
+#set(PROTO_FILES "/home/mohammad/Desktop/Grpc_System_Info/Project1/SysInfo.proto")
+set(PROTO_FILES "/home/mohammadmahdi/Desktop/Grpc_System_Info/Project1/SysInfo.proto")
 
 include_directories("/usr/include")
 link_directories("/usr/lib")
@@ -15,7 +16,7 @@ find_package(spdlog CONFIG REQUIRED)
 
 #include_directories("//usr//include")
 #include_directories("//usr//local//include")
-set(PROTOC "/usr/bin/protoc.exe")
+set(PROTOC "/usr/bin/protoc")
 set(GRPC_CPP_PLUGIN "/bin/grpc_cpp_plugin")
 find_package(Protobuf REQUIRED)
 include_directories(${PROTOBUF_INCLUDE_DIRS})
