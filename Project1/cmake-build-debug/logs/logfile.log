@@ -1,0 +1,42 @@
+[2024-08-25 00:59:34.865] [file_logger] [debug] System is running in console...
+[2024-08-25 01:11:29.435] [file_logger] [debug] **************************************Request for Ram Information**************************************
+[2024-08-25 01:11:29.436] [file_logger] [debug] Received request from: ipv4:192.168.242.167:56017
+[2024-08-26 08:30:21.505] [file_logger] [debug] System is running in console...
+[2024-08-26 08:33:50.168] [file_logger] [debug] System is running in console...
+[2024-08-26 08:41:07.703] [file_logger] [debug] **************************************Request for Ram Information**************************************
+[2024-08-26 08:41:07.703] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63882
+[2024-08-26 08:43:40.438] [file_logger] [debug] **************************************Request for Ram Information**************************************
+[2024-08-26 08:43:40.438] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63314
+[2024-08-26 08:43:40.444] [file_logger] [debug] **************************************Request for CPU Information**************************************
+[2024-08-26 08:43:40.444] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63314
+[2024-08-26 08:44:24.895] [file_logger] [debug] **************************************Request for Ram Information**************************************
+[2024-08-26 08:44:24.895] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63319
+[2024-08-26 08:44:24.901] [file_logger] [debug] **************************************Request for CPU Information**************************************
+[2024-08-26 08:44:24.901] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63319
+[2024-08-26 08:44:24.905] [file_logger] [debug] **************************************Request for Disk Information**************************************
+[2024-08-26 08:44:24.905] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63319
+[2024-08-26 08:44:24.916] [file_logger] [debug] **************************************Request for Network Adaptor Information**************************************
+[2024-08-26 08:44:24.916] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63319
+[2024-08-26 08:44:34.931] [file_logger] [debug] **************************************Request for OS Information**************************************
+[2024-08-26 08:44:34.931] [file_logger] [debug] Received request from: ipv4:192.168.13.45:63319
+[2024-08-26 08:50:31.075] [file_logger] [debug] **************************************Request for Ram Information**************************************
+[2024-08-26 08:50:31.081] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54334
+[2024-08-26 08:50:31.087] [file_logger] [debug] **************************************Request for CPU Information**************************************
+[2024-08-26 08:50:31.087] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54334
+[2024-08-26 08:50:31.091] [file_logger] [debug] **************************************Request for Disk Information**************************************
+[2024-08-26 08:50:31.091] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54334
+[2024-08-26 08:50:31.096] [file_logger] [debug] **************************************Request for Network Adaptor Information**************************************
+[2024-08-26 08:50:31.096] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54334
+[2024-08-26 08:50:41.120] [file_logger] [debug] **************************************Request for OS Information**************************************
+[2024-08-26 08:50:41.123] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54334
+[2024-08-26 08:53:20.622] [file_logger] [debug] System is running in console...
+[2024-08-26 09:03:05.586] [file_logger] [debug] **************************************Request for Ram Information**************************************
+[2024-08-26 09:03:05.586] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54390
+[2024-08-26 09:03:05.593] [file_logger] [debug] **************************************Request for CPU Information**************************************
+[2024-08-26 09:03:05.593] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54390
+[2024-08-26 09:03:05.598] [file_logger] [debug] **************************************Request for Disk Information**************************************
+[2024-08-26 09:03:05.598] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54390
+[2024-08-26 09:03:05.606] [file_logger] [debug] **************************************Request for Network Adaptor Information**************************************
+[2024-08-26 09:03:05.606] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54390
+[2024-08-26 09:03:15.623] [file_logger] [debug] **************************************Request for OS Information**************************************
+[2024-08-26 09:03:15.623] [file_logger] [debug] Received request from: ipv4:192.168.13.45:54390

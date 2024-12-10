@@ -18,7 +18,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FileName.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="getsysinfo.cpp">
@@ -33,6 +33,9 @@
     <ClCompile Include="SysInfo.pb.cc">
       <Filter>Resource Files\Source Files\gRPC</Filter>
     </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SysInfo.proto" />
@@ -41,11 +44,14 @@
     <ClInclude Include="sysinfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SysInfo.grpc.pb.h">
+      <Filter>Resource Files\Source Files\gRPC</Filter>
+    </ClInclude>
     <ClInclude Include="SysInfo.pb.h">
       <Filter>Resource Files\Source Files\gRPC</Filter>
     </ClInclude>
-    <ClInclude Include="SysInfo.grpc.pb.h">
-      <Filter>Resource Files\Source Files\gRPC</Filter>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
